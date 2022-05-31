@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be251821316fed84a97e38991fa8f1a2, type: 3}
+  m_Name: TurretGun
+  m_EditorClassIdentifier: 
+  itemID: 8aa5c8e3-a7b0-461c-a852-173b13bd448c
+  displayName: Turret Gun
+  description: Used by automatted Gun Turrets
+  icon: {fileID: 0}
+  pickup: {fileID: 0}
+  isStackable: 0
+  maxNumberInStack: 1
+  allowedEquipLocation: 3
+  weaponOverrideController: {fileID: 0}
+  equipedPrefab: {fileID: 2184448118492454962, guid: 4a728a4e7c0947e4983713ac97f675ad, type: 3}
+  ammunitionType: 0
+  weaponDamageDice: 8
+  weaponDamageDiceNumber: 2
+  weaponDamageAdditiveBonus: 2
+  weaponToHitBonus: 2
+  percentageBonus: 0
+  weaponRange: 12
+  isRightHanded: 1
+  isRangedWeapon: 1
+  projectile: {fileID: 0}
+  modifierAbility: 1

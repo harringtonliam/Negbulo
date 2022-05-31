@@ -1,0 +1,353 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7532002641689053898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: a92fcc51-5545-4df4-9f83-a2201e6730e6
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogueText: The burst rifle is in the crate.  Remember to take it with you when
+    you go.   Good Luck Private!
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1809
+    y: 105
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 1
+  onExitQuest: {fileID: 11400000, guid: a10c674cd53a4ce47a1653fecb43cc4e, type: 2}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and: []
+--- !u!114 &-6435533834133325338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: 064f7d56-86c8-4263-97f8-2080a5b8a40f
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  dialogueText: I might as well get started then.
+  children:
+  - a92fcc51-5545-4df4-9f83-a2201e6730e6
+  rect:
+    serializedVersion: 2
+    x: 1559
+    y: 105
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and: []
+--- !u!114 &-5721449463658820226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: b771993c-d71a-4321-9e61-c93ebc8c2633
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogueText: Get going Private.  Report to Lt Enoch at the other side.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 109
+    y: 422
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and:
+    - or:
+      - predicate: 0
+        parameters:
+        - Training Mission 3
+        negate: 0
+--- !u!114 &-4220777999495140963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: 0df5a311-b735-4199-b478-19e57ba42a99
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  dialogueText: Lieutenant?  Madam Neman was there after the last test.  She said
+    she would make this one harder.
+  children:
+  - 9b205055-a45f-4bfc-923e-10afa5e083e4
+  rect:
+    serializedVersion: 2
+    x: 340
+    y: 209
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and: []
+--- !u!114 &-3744211735283114439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: 1780c6e0-98ff-4b57-923d-37a74978ccad
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  dialogueText: What's her interest Lieutenant?
+  children:
+  - 7302aa2f-1930-46b7-b185-01576c79c53b
+  rect:
+    serializedVersion: 2
+    x: 840
+    y: 209
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 095a95c4ffea4644ba71ebbf36814ac5, type: 3}
+  m_Name: LtGorman_03
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 5957283240041587855}
+  - {fileID: 1888625616136879536}
+  - {fileID: -4220777999495140963}
+  - {fileID: 2323731625348048609}
+  - {fileID: -3744211735283114439}
+  - {fileID: 3885812483723099631}
+  - {fileID: 5963596122202921753}
+  - {fileID: -6435533834133325338}
+  - {fileID: -7532002641689053898}
+  - {fileID: -5721449463658820226}
+  newNodeOffSet: {x: 250, y: 0}
+--- !u!114 &1888625616136879536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: ba2b8474-8118-43be-9dd9-960e131c3676
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  dialogueText: 'Good to hear Lieutenant '
+  children:
+  - 6e8b57b9-8e01-4431-885d-8352fc8e4958
+  rect:
+    serializedVersion: 2
+    x: 339
+    y: 97
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and: []
+--- !u!114 &2323731625348048609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: 9b205055-a45f-4bfc-923e-10afa5e083e4
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogueText: "That\u2019s true.  She has made some changes, but thankfully she
+    hasn't changed the essential nature of this test, so don\u2019t concern yourself
+    to much."
+  children:
+  - 1780c6e0-98ff-4b57-923d-37a74978ccad
+  rect:
+    serializedVersion: 2
+    x: 590
+    y: 209
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and: []
+--- !u!114 &3885812483723099631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: 7302aa2f-1930-46b7-b185-01576c79c53b
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogueText: I don't know Private.  However she runs the company, so she  can
+    do whatever she pleases.
+  children:
+  - 6e8b57b9-8e01-4431-885d-8352fc8e4958
+  rect:
+    serializedVersion: 2
+    x: 1090
+    y: 209
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and: []
+--- !u!114 &5957283240041587855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: 02c853a1-f358-41ad-918d-708107d5acde
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogueText: Good Evening Private Kim.  This is the third and final test.
+  children:
+  - ba2b8474-8118-43be-9dd9-960e131c3676
+  - 0df5a311-b735-4199-b478-19e57ba42a99
+  - 2c26bebf-596d-4ac0-99e7-0c58d4da5894
+  rect:
+    serializedVersion: 2
+    x: 91
+    y: 92
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and:
+    - or:
+      - predicate: 0
+        parameters:
+        - Training Mission 3
+        negate: 1
+--- !u!114 &5963596122202921753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: 6e8b57b9-8e01-4431-885d-8352fc8e4958
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogueText: The exercise will test your ability with the M42B Burst Rifle.  And 
+    like the last one there will be some challenges that you can solve with you weaponry
+    alone.  So keep your wits about you.
+  children:
+  - 064f7d56-86c8-4263-97f8-2080a5b8a40f
+  rect:
+    serializedVersion: 2
+    x: 1309
+    y: 105
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and: []

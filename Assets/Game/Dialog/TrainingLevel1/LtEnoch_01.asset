@@ -1,0 +1,228 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8956018269158607686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: 99814e48-7567-4e82-99f9-c1cb3482596a
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogueText: Don't bother me Private.  Proceed to the next test.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 19
+    y: 440
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and:
+    - or:
+      - predicate: 1
+        parameters:
+        - Training Mission 1
+        negate: 0
+--- !u!114 &-5690635506134797146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: 1bc4a18f-bccf-4525-9562-d68e4a0409d4
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogueText: You're late Private!
+  children:
+  - 1a2ca38f-49e9-4652-b211-3ba4016c40e9
+  - 8357f53b-af62-4348-b400-79d5045310ea
+  rect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and:
+    - or:
+      - predicate: 1
+        parameters:
+        - Training Mission 1
+        negate: 1
+--- !u!114 &-2968735972969441069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: 1a2ca38f-49e9-4652-b211-3ba4016c40e9
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  dialogueText: Yes Sir.  No excuse.
+  children:
+  - fc24277c-8da8-4553-8930-700f2fee4a0a
+  rect:
+    serializedVersion: 2
+    x: 250
+    y: 0
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and:
+    - or:
+      - predicate: 1
+        parameters:
+        - Training Mission 1
+        negate: 1
+--- !u!114 &-1032251697358304104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: 90cbb5ac-b488-4fde-bf0c-81b2fc1e5590
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogueText: Don't be insolent Private.
+  children:
+  - fc24277c-8da8-4553-8930-700f2fee4a0a
+  rect:
+    serializedVersion: 2
+    x: 495
+    y: 133
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and: []
+--- !u!114 &-934796662948168683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: 8357f53b-af62-4348-b400-79d5045310ea
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  dialogueText: Late Lieutenant?  What do you mean late?
+  children:
+  - 90cbb5ac-b488-4fde-bf0c-81b2fc1e5590
+  rect:
+    serializedVersion: 2
+    x: 245
+    y: 133
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and:
+    - or:
+      - predicate: 1
+        parameters:
+        - Training Mission 1
+        negate: 1
+--- !u!114 &-132209857164821285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: fc24277c-8da8-4553-8930-700f2fee4a0a
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogueText: Anway you appear to have compelted the first assesment.  Report to
+    training bay 3 for the next one.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1139
+    y: 29
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 2
+  onExitQuest: {fileID: 11400000, guid: 41f5c6e7fe3af4e45876b7bd9e3a3cc6, type: 2}
+  onEnterQuestObjective: 
+  onExitQuestObjective: Get to the other side of the first training level
+  onTriggerDialogueWithTag: 
+  condition:
+    and: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 095a95c4ffea4644ba71ebbf36814ac5, type: 3}
+  m_Name: LtEnoch_01
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -5690635506134797146}
+  - {fileID: -2968735972969441069}
+  - {fileID: -934796662948168683}
+  - {fileID: -1032251697358304104}
+  - {fileID: -132209857164821285}
+  - {fileID: -8956018269158607686}
+  newNodeOffSet: {x: 250, y: 0}

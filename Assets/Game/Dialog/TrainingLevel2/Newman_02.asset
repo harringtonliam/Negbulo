@@ -1,0 +1,188 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 095a95c4ffea4644ba71ebbf36814ac5, type: 3}
+  m_Name: Newman_02
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 8715385112537864253}
+  - {fileID: 1275942550424235437}
+  - {fileID: 975538644776288521}
+  - {fileID: 1432556782211769506}
+  - {fileID: 8084377671438176449}
+  newNodeOffSet: {x: 250, y: 0}
+--- !u!114 &975538644776288521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: bf6674a1-2fe9-49f7-8c13-b3c6883afd8d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  dialogueText: What?  It was hardly easy!  Taking on a Military Robot with only
+    a pistol is...
+  children:
+  - 107f21c8-2e50-4e6f-8013-800cb8d1b64d
+  rect:
+    serializedVersion: 2
+    x: 534
+    y: 29
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and: []
+--- !u!114 &1275942550424235437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: 08a7ef34-7064-4f61-bd4d-ce472403c59e
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogueText: "You\u2019re supposed to be training soldiers, not school children."
+  children:
+  - bf6674a1-2fe9-49f7-8c13-b3c6883afd8d
+  rect:
+    serializedVersion: 2
+    x: 284
+    y: 29
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and: []
+--- !u!114 &1432556782211769506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: 107f21c8-2e50-4e6f-8013-800cb8d1b64d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogueText: You speak when you are spoken to! I'll be overseeing the next test
+    personally.  Rest assured you won't find that so straightforward.   You may go.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 784
+    y: 29
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 2
+  onExitQuest: {fileID: 11400000, guid: 9c2cbb07945409548ba0c200fb223a42, type: 2}
+  onEnterQuestObjective: 
+  onExitQuestObjective: Report to Lt Enoch
+  onTriggerDialogueWithTag: 
+  condition:
+    and: []
+--- !u!114 &8084377671438176449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: f16e4cd5-c448-496a-bb2f-f2dfaa43d024
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogueText: Don't speak to me!
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 65
+    y: 305
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and:
+    - or:
+      - predicate: 1
+        parameters:
+        - Training Mission 2
+        negate: 0
+--- !u!114 &8715385112537864253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: 04e24e56-7b75-4f60-a55c-192c0e7876c4
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogueText: She hardly has a scratch on her Lieutenant.  Are you sure these tests
+    aren't too easy?
+  children:
+  - 08a7ef34-7064-4f61-bd4d-ce472403c59e
+  - 2f11f9b4-157d-42c0-b1a1-6dd8facbd8fb
+  rect:
+    serializedVersion: 2
+    x: 34
+    y: 29
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and:
+    - or:
+      - predicate: 1
+        parameters:
+        - Training Mission 2
+        negate: 1

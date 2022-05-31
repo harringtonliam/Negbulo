@@ -1,0 +1,349 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9181730132902529248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: 333f90f4-6138-4ee8-95f6-a510332eae0f
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogueText: This time you'll be assessed on your ability with your side arm.  
+    You'll find a service pistol and ammunition in the crate.
+  children:
+  - 0524c80e-a09f-4316-84b7-80423abfe864
+  rect:
+    serializedVersion: 2
+    x: 797
+    y: -1
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and: []
+--- !u!114 &-5878885138085197601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: 0524c80e-a09f-4316-84b7-80423abfe864
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  dialogueText: A gun against practice dummies?  This is going to be easy.
+  children:
+  - e4774ff0-06ff-4728-a694-38e2ce052f6c
+  rect:
+    serializedVersion: 2
+    x: 1047
+    y: -1
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and: []
+--- !u!114 &-5877075597640351054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: 88868740-7a46-4933-a6b8-a488c3e5cbdb
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  dialogueText: Not another test Lieutenant!  How do I get out of this chicken shit
+    outfit?
+  children:
+  - 46a7a962-63f0-44ee-8d4a-3fc8b6732c98
+  rect:
+    serializedVersion: 2
+    x: 245
+    y: 157
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and: []
+--- !u!114 &-3255243598085928900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: 197a8894-c24f-4c2f-8c4c-f0e7442162d8
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogueText: Off you go then Private.  Remember to collect your weapon from the
+    crate first, and go through the door when you are ready.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1147
+    y: 251
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 1
+  onExitQuest: {fileID: 11400000, guid: 9c2cbb07945409548ba0c200fb223a42, type: 2}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and: []
+--- !u!114 &-1144070912180775258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: 57a5fde2-efbe-4285-b243-3015d1748359
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogueText: Time to begin the test private.  Don't hang around.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 30
+    y: 316
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and:
+    - or:
+      - predicate: 0
+        parameters:
+        - Training Mission 2
+        negate: 0
+--- !u!114 &-599938527140765609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: 46a7a962-63f0-44ee-8d4a-3fc8b6732c98
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogueText: Very funny Private!  Now pay attention.
+  children:
+  - 333f90f4-6138-4ee8-95f6-a510332eae0f
+  rect:
+    serializedVersion: 2
+    x: 495
+    y: 157
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and: []
+--- !u!114 &-191260520465940446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: 3bc58038-f698-46ea-aa48-2505e8470a45
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  dialogueText: I'm ready to start.
+  children:
+  - 197a8894-c24f-4c2f-8c4c-f0e7442162d8
+  rect:
+    serializedVersion: 2
+    x: 831
+    y: 241
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 095a95c4ffea4644ba71ebbf36814ac5, type: 3}
+  m_Name: LtGorman_02
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 208085099121898423}
+  - {fileID: 4089127259036251991}
+  - {fileID: -5877075597640351054}
+  - {fileID: -9181730132902529248}
+  - {fileID: -599938527140765609}
+  - {fileID: -5878885138085197601}
+  - {fileID: 4615855051766175813}
+  - {fileID: -191260520465940446}
+  - {fileID: -3255243598085928900}
+  - {fileID: -1144070912180775258}
+  newNodeOffSet: {x: 250, y: 0}
+--- !u!114 &208085099121898423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: 1dd635be-ad85-4d7b-bf55-12da8a94e0db
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogueText: Welcome Private Kim.  Are you ready for the next test?
+  children:
+  - d1e6d824-18c9-47be-8f23-df68a3992543
+  - 88868740-7a46-4933-a6b8-a488c3e5cbdb
+  rect:
+    serializedVersion: 2
+    x: -1
+    y: -1
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and:
+    - or:
+      - predicate: 0
+        parameters:
+        - Training Mission 2
+        negate: 1
+--- !u!114 &4089127259036251991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: d1e6d824-18c9-47be-8f23-df68a3992543
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  dialogueText: Yes Lieutenant!
+  children:
+  - 333f90f4-6138-4ee8-95f6-a510332eae0f
+  rect:
+    serializedVersion: 2
+    x: 250
+    y: 0
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and: []
+--- !u!114 &4615855051766175813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: e4774ff0-06ff-4728-a694-38e2ce052f6c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogueText: "Don\u2019t be too sure. This time your cunning will also be tested,
+    and you'll learn about the limits of your weaponry. So don't be overconfident."
+  children:
+  - 3bc58038-f698-46ea-aa48-2505e8470a45
+  rect:
+    serializedVersion: 2
+    x: 1297
+    y: -1
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and: []

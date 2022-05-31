@@ -1,0 +1,153 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-870973375117220955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: bc1fb442-d42a-461c-afcd-d0cf9e6a4e5c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogueText: Err... This Madam Newman, the CEO of the Outland Amalgamate she has
+    taken an interest in our training methods.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 574
+    y: 38
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 3
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: MadamNewman
+  condition:
+    and: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 095a95c4ffea4644ba71ebbf36814ac5, type: 3}
+  m_Name: LtEnoch_02
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 7538248078647932339}
+  - {fileID: 7981127713010892593}
+  - {fileID: -870973375117220955}
+  - {fileID: 8693383934475853440}
+  newNodeOffSet: {x: 250, y: 0}
+--- !u!114 &7538248078647932339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: 2f11f9b4-157d-42c0-b1a1-6dd8facbd8fb
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogueText: You took your time again Private!
+  children:
+  - cb037ed9-64c2-47fa-bbf8-f3fe7c31ad59
+  rect:
+    serializedVersion: 2
+    x: 50
+    y: 43
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and:
+    - or:
+      - predicate: 1
+        parameters:
+        - Training Mission 2
+        negate: 1
+--- !u!114 &7981127713010892593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: cb037ed9-64c2-47fa-bbf8-f3fe7c31ad59
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  dialogueText: Yes Sir!
+  children:
+  - bc1fb442-d42a-461c-afcd-d0cf9e6a4e5c
+  rect:
+    serializedVersion: 2
+    x: 324
+    y: 38
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and: []
+--- !u!114 &8693383934475853440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: f018a3ca-5dae-4abc-b4e5-80259d520ba2
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogueText: Move along Private!
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 47
+    y: 270
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and:
+    - or:
+      - predicate: 1
+        parameters:
+        - Training Mission 2
+        negate: 0

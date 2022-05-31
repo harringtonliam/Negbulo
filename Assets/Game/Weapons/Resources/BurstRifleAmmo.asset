@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fea809ae34782f1459e15ce1f99338ae, type: 3}
+  m_Name: BurstRifleAmmo
+  m_EditorClassIdentifier: 
+  itemID: f94b6adc-3d58-4186-bee7-91a1d2e9db0b
+  displayName: ' Burst Rifle Ammunition'
+  description: Holds 100 Rounds for a Burst Rifle
+  icon: {fileID: 21300000, guid: 331179c41fc4fa04d918ecb0579b4412, type: 3}
+  pickup: {fileID: 7864711616720041944, guid: f7d6eff969ff4dd4d97eb4ff3ea52584, type: 3}
+  isStackable: 1
+  maxNumberInStack: 100
+  allowedEquipLocation: 10
+  ammunitionType: 4
