@@ -91,6 +91,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useRange: 2.5
+--- !u!114 &2947564019595741144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3229769403555118710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7351dc21d38f4e14b92a8e8ffa8a2f4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zoomLerpSpeed: 30
+  maxZoom: 90
+  minZoom: 40
 --- !u!114 &3132724907511626440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,6 +120,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventorySize: 16
   inventorySlots: []
+--- !u!114 &4099263278515730810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3229769403555118710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f3f0e9c2d0d30c43b342fa175fe9b9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camerRotationSpeed: 1
 --- !u!114 &4974660351007354627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,19 +259,6 @@ MonoBehaviour:
   - weaponConfig: {fileID: 0}
     number: 0
     isActive: 0
---- !u!114 &4099263278515730810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3229769403555118710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f3f0e9c2d0d30c43b342fa175fe9b9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerRotationSpeed: 1
 --- !u!114 &2821800719159931712
 MonoBehaviour:
   m_ObjectHideFlags: 0

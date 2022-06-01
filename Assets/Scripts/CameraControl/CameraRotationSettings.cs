@@ -6,20 +6,14 @@ namespace RPG.CameraControl
 {
     public class CameraRotationSettings : MonoBehaviour
     {
-        [SerializeField] CameraRotationValues cameraRotationValues = new CameraRotationValues();
+        [SerializeField] float cameraXRotation = 52f;
+        [SerializeField] float cameraYRotation = 0f;
+        [SerializeField] float cameraZRotation = 0f;
 
-        [System.Serializable]
-        public class CameraRotationValues
-        {
-            public float cameraXRotation;
-            public float cameraYRotation;
-            public float cameraZRotation;
-        }
+        public float CameraXRotation {  get { return cameraXRotation; } }
+        public float CameraYRotation { get { return cameraYRotation; } }
+        public float CameraZRotation { get { return cameraZRotation; } }
 
-        public CameraRotationValues GetCameraRotationSettings()
-        {
-            return cameraRotationValues;
-        }
     }
 
 }

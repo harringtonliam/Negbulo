@@ -14,7 +14,7 @@ namespace RPG.CameraControl
         CinemachineVirtualCamera followCamera;
         float rotationOfGameObject = 0f;
         bool rotated = false;
-        CameraRotationSettings.CameraRotationValues cameraRotationValues;
+        CameraRotationSettings cameraRotationSettings = null;
 
 
         void Start()
@@ -30,19 +30,11 @@ namespace RPG.CameraControl
 
         public void RotateCamera()
         {
-            if (rotated)
+            if (!Mathf.Approximately(cameraRotationSettings.CameraYRotation, followCamera.transform.rotation.y))
             {
-                return;
-            }
-
-            float newYRotation = rotationOfGameObject;//' + rotationOffset;
-            Debug.Log("rotate camera RoationOfGameObject= "+ rotationOfGameObject.ToString() + " new rotation " + newYRotation.ToString() + " camera rotation " + followCamera.transform.rotation.y);
-            if (!Mathf.Approximately(cameraRotationValues.cameraYRotation, followCamera.transform.rotation.y))
-            {
-                var newCameraRotation = Quaternion.Euler(cameraRotationValues.cameraXRotation, cameraRotationValues.cameraYRotation, cameraRotationValues.cameraZRotation);
+                var newCameraRotation = Quaternion.Euler(cameraRotationSettings.CameraXRotation, cameraRotationSettings.CameraYRotation, cameraRotationSettings.CameraZRotation);
 
                followCamera.transform.rotation = newCameraRotation;
-               // rotated = true;
             }
 
         }
@@ -53,11 +45,13 @@ namespace RPG.CameraControl
             RaycastHit hit;
             Physics.Raycast(ray, out hit, 1f);
 
-            Debug.Log("CheckForCameraRotator  hit=" + hit.transform.gameObject);
+            if(hit.transform == null)
+            {
+                return;
+            }
 
-            Debug.Log("CheckForCameraRotator parent  hit=" + hit.transform.parent.gameObject);
-
-            CameraRotationSettings cameraRotationSettings = hit.transform.GetComponent<CameraRotationSettings>();
+             cameraRotationSettings = hit.transform.GetComponent<CameraRotationSettings>();
+            
             if (cameraRotationSettings == null)
             {
                 cameraRotationSettings = hit.transform.parent.GetComponent<CameraRotationSettings>();
@@ -65,15 +59,13 @@ namespace RPG.CameraControl
 
             if (cameraRotationSettings != null)
             {
-                cameraRotationValues = cameraRotationSettings.GetCameraRotationSettings();
-                StartCameraRotation();
+                 StartCameraRotation();
             }
 
         }
 
         private void StartCameraRotation()
         {
-            rotated = false;
             RotateCamera();
         }
     }
