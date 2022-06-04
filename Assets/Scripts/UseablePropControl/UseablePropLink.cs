@@ -11,6 +11,7 @@ namespace RPG.UseablePropControl
     {
 
         public event Action onDisplayUseablePropUI;
+        public event Action onDisplaySleeperRoomControlsUI;
 
 
         UseableProp currentUseableProp;
@@ -23,7 +24,17 @@ namespace RPG.UseablePropControl
         public void DisplayUsePropUI(UseableProp useableProp)
         {
             currentUseableProp = useableProp;
-            if (onDisplayUseablePropUI != null)
+
+            SleeperRoomControls sleeperRoomControls = useableProp.GetComponent<SleeperRoomControls>();
+            if(sleeperRoomControls)
+            {
+                if (onDisplaySleeperRoomControlsUI != null)
+                {
+                    onDisplaySleeperRoomControlsUI();
+                }
+
+            }
+            else if (onDisplayUseablePropUI != null)
             {
                 onDisplayUseablePropUI();
             }
