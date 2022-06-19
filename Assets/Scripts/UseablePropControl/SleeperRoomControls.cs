@@ -19,7 +19,7 @@ namespace RPG.UseablePropControl
         Blue,
         Cyan,
         Magenta,
-        Orange 
+        Orange
     }
 
     public class SleeperRoomControls : UseableProp
@@ -28,22 +28,28 @@ namespace RPG.UseablePropControl
         ButtonColor[] selectedButtonColors = new ButtonColor[6];
 
 
-        public ButtonColor[] SelectedButtonColors {  get { return selectedButtonColors; } }
+        public ButtonColor[] SelectedButtonColors { get { return selectedButtonColors; } }
 
         UseablePropLink sleeperRoomControlLink;
-        GameConsole gameConsole;
 
         public event Action selectionUpdated;
         public event Action selectionConfirmed;
 
+        private int currentButtonIndex = 0;
+
+
+        public void SetColorOfCurrentButton(ButtonColor buttonColor)
+        {
+            SetButtonColor(currentButtonIndex, buttonColor);
+            currentButtonIndex++;
+        }
 
         public void SetButtonColor(int index, ButtonColor newColor)
         {
+            Debug.Log("SleeperRoomControls SetButtonColor " + index.ToString() + "  " + newColor.ToString());
             selectedButtonColors[index] = newColor;
             CallEventSelectionUpdated();
-
         }
-
 
         public void ClearSelectedColors()
         {

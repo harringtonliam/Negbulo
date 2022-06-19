@@ -11,6 +11,8 @@ namespace RPG.UI.UseableProps
 
         [SerializeField] GameObject uiCanvas = null;
         [SerializeField] Button closeButton;
+        [SerializeField] GameObject indicatorLightPrefab = null;
+        [SerializeField] Transform indicatorLightsPanel = null;
 
         int nextIndicatorIndex = 0;
 
@@ -27,6 +29,8 @@ namespace RPG.UI.UseableProps
 
         }
 
+
+
         private void ShowDisplay()
         { 
             if (useablePropLink == null) return;
@@ -34,14 +38,7 @@ namespace RPG.UI.UseableProps
 
             player.GetComponent<UseProp>().onUsePropCancel += HideDisplay;
 
-            //if (useablePropLink.CurrentUsableProp.ActivateText == string.Empty)
-            //{
-            //    actionCanvas.SetActive(false);
-            //}
-            //else
-            //{
-            //    actionCanvas.SetActive(true);
-            //}
+            RedrawIndicaorLights();
 
             uiCanvas.SetActive(true);
         }
@@ -55,6 +52,59 @@ namespace RPG.UI.UseableProps
         {
             player.GetComponent<UseProp>().Cancel();
             HideDisplay();
+        }
+
+        private void RedrawIndicaorLights()
+        {
+            foreach (Transform child in indicatorLightsPanel)
+            {
+                Destroy(child.gameObject);
+            }
+
+            SleeperRoomControls sleeperRoomControls = (SleeperRoomControls)useablePropLink.CurrentUsableProp;
+
+            for (int i = 0; i < sleeperRoomControls.SelectedButtonColors.Length; i++)
+            {
+                var indicatorLight = Instantiate(indicatorLightPrefab, indicatorLightsPanel);
+                switch (sleeperRoomControls.SelectedButtonColors[i])
+                {
+                    case ButtonColor.Black:
+                        indicatorLight.GetComponent<Image>().color = Color.black;
+                        break;
+                    case ButtonColor.White:
+                        indicatorLight.GetComponent<Image>().color = Color.white;
+                        break;
+                    case ButtonColor.Gray:
+                        indicatorLight.GetComponent<Image>().color = Color.gray;
+                        break;
+                    case ButtonColor.Green:
+                        indicatorLight.GetComponent<Image>().color = Color.green;
+                        break;
+                    case ButtonColor.Blue:
+                        indicatorLight.GetComponent<Image>().color = Color.blue;
+                        break;
+                    case ButtonColor.Yellow:
+                        indicatorLight.GetComponent<Image>().color = Color.yellow;
+                        break;
+                    case ButtonColor.Cyan:
+                        indicatorLight.GetComponent<Image>().color = Color.cyan;
+                        break;
+                    case ButtonColor.Magenta:
+                        indicatorLight.GetComponent<Image>().color = Color.magenta;
+                        break;
+                    case ButtonColor.Red:
+                        indicatorLight.GetComponent<Image>().color = Color.red;
+                        break;
+                    case ButtonColor.Orange:
+                        indicatorLight.GetComponent<Image>().color = Color.red;
+                        break;
+                    default:
+                        indicatorLight.GetComponent<Image>().color = Color.clear;
+                        break;
+
+                }
+
+            }
         }
 
     }
