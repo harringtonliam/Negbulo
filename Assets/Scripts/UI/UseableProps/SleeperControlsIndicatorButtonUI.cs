@@ -25,7 +25,6 @@ namespace RPG.UI.UseableProps
 
         private void Button_onClick()
         {
-            Debug.Log("Button Clicked " + buttonColor.ToString());
             if (useablePropLink == null) return;
 
             SleeperRoomControls sleeperRoomControls = (SleeperRoomControls)useablePropLink.CurrentUsableProp;

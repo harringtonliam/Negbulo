@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using RPG.UseablePropControl;
+using System;
 
 namespace RPG.UI.UseableProps
 {
@@ -35,7 +36,6 @@ namespace RPG.UI.UseableProps
         { 
             if (useablePropLink == null) return;
 
-
             player.GetComponent<UseProp>().onUsePropCancel += HideDisplay;
 
             RedrawIndicaorLights();
@@ -66,47 +66,53 @@ namespace RPG.UI.UseableProps
             for (int i = 0; i < sleeperRoomControls.SelectedButtonColors.Length; i++)
             {
                 var indicatorLight = Instantiate(indicatorLightPrefab, indicatorLightsPanel);
-                switch (sleeperRoomControls.SelectedButtonColors[i])
-                {
-                    case ButtonColor.Black:
-                        indicatorLight.GetComponent<Image>().color = Color.black;
-                        break;
-                    case ButtonColor.White:
-                        indicatorLight.GetComponent<Image>().color = Color.white;
-                        break;
-                    case ButtonColor.Gray:
-                        indicatorLight.GetComponent<Image>().color = Color.gray;
-                        break;
-                    case ButtonColor.Green:
-                        indicatorLight.GetComponent<Image>().color = Color.green;
-                        break;
-                    case ButtonColor.Blue:
-                        indicatorLight.GetComponent<Image>().color = Color.blue;
-                        break;
-                    case ButtonColor.Yellow:
-                        indicatorLight.GetComponent<Image>().color = Color.yellow;
-                        break;
-                    case ButtonColor.Cyan:
-                        indicatorLight.GetComponent<Image>().color = Color.cyan;
-                        break;
-                    case ButtonColor.Magenta:
-                        indicatorLight.GetComponent<Image>().color = Color.magenta;
-                        break;
-                    case ButtonColor.Red:
-                        indicatorLight.GetComponent<Image>().color = Color.red;
-                        break;
-                    case ButtonColor.Orange:
-                        indicatorLight.GetComponent<Image>().color = Color.red;
-                        break;
-                    default:
-                        indicatorLight.GetComponent<Image>().color = Color.clear;
-                        break;
-
-                }
-
+                indicatorLight.GetComponent<Image>().color = GetButtonColor(sleeperRoomControls.SelectedButtonColors[i]);
             }
         }
 
+        private Color GetButtonColor(ButtonColor buttonColor)
+        {
+            Color newButtonColor = Color.clear;
+            switch (buttonColor)
+            {
+                case ButtonColor.Black:
+                    newButtonColor =  Color.black;
+                    break;
+                case ButtonColor.White:
+                    newButtonColor = Color.white;
+                    break;
+                case ButtonColor.Gray:
+                    newButtonColor = Color.gray;
+                    break;
+                case ButtonColor.Green:
+                    newButtonColor = Color.green;
+                    break;
+                case ButtonColor.Blue:
+                    newButtonColor = Color.blue;
+                    break;
+                case ButtonColor.Yellow:
+                    newButtonColor = Color.yellow;
+                    break;
+                case ButtonColor.Cyan:
+                    newButtonColor = Color.cyan;
+                    break;
+                case ButtonColor.Magenta:
+                    newButtonColor = Color.magenta;
+                    break;
+                case ButtonColor.Red:
+                    newButtonColor = Color.red;
+                    break;
+                case ButtonColor.Orange:
+                    Color orangeColor = new Color(1f, 0.647f, 0f);
+                    newButtonColor = orangeColor;
+                    break;
+                default:
+                    newButtonColor = Color.clear;
+                    break;
+
+            }
+            return newButtonColor;
+        }
     }
 }
 

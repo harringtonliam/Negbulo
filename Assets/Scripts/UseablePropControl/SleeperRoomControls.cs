@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using RPG.Control;
 using RPG.Core;
+using RPG.Movement;
 using System;
 
 namespace RPG.UseablePropControl
@@ -24,6 +25,9 @@ namespace RPG.UseablePropControl
 
     public class SleeperRoomControls : UseableProp
     {
+        [SerializeField] GameObject sleeperCoffinPrefab;
+        [SerializeField] Transform sleeperCoffinSpawnPoint;
+
 
         ButtonColor[] selectedButtonColors = new ButtonColor[6];
 
@@ -41,12 +45,28 @@ namespace RPG.UseablePropControl
         public void SetColorOfCurrentButton(ButtonColor buttonColor)
         {
             SetButtonColor(currentButtonIndex, buttonColor);
-            currentButtonIndex++;
+            if(currentButtonIndex == selectedButtonColors.Length -1)
+            {
+                SpawnSleeperCoffin();
+                ClearSelectedColors();
+            }
+            else
+            {
+                currentButtonIndex++;
+            }
+            
+        }
+
+        private void SpawnSleeperCoffin()
+        {
+            Debug.Log("Spawn sleeper Coffin");
+            GameObject sleeperCoffin = GameObject.Instantiate(sleeperCoffinPrefab, sleeperCoffinSpawnPoint.position, Quaternion.identity, this.transform);
+            PropMover propMover = sleeperCoffin.GetComponent<PropMover>();
+            propMover.TriggerMoveToEnd();
         }
 
         public void SetButtonColor(int index, ButtonColor newColor)
         {
-            Debug.Log("SleeperRoomControls SetButtonColor " + index.ToString() + "  " + newColor.ToString());
             selectedButtonColors[index] = newColor;
             CallEventSelectionUpdated();
         }
@@ -59,7 +79,6 @@ namespace RPG.UseablePropControl
 
         public void ConfirmSelection()
         {
-            Debug.Log("Selection Confirmed " + selectedButtonColors.ToString());
             if (selectionConfirmed != null)
             {
                 selectionConfirmed();

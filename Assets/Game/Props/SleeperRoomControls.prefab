@@ -32,6 +32,7 @@ Transform:
   - {fileID: 449602592017242272}
   - {fileID: 8779394542645223672}
   - {fileID: 4063354411403287746}
+  - {fileID: 5752352789990110883}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
@@ -60,6 +61,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dca27d4a2d60e2e4391dacd9e8da32c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActivated: 0
+  useProp:
+    m_PersistentCalls:
+      m_Calls: []
+  usePropFloat:
+    m_PersistentCalls:
+      m_Calls: []
+  usePropPatrolPath:
+    m_PersistentCalls:
+      m_Calls: []
+  usePropCombatTarget:
+    m_PersistentCalls:
+      m_Calls: []
+  displayText: This thing does stuff
+  activateText: Click to activate this item
+  deactivateText: Click to deactivate this item
+  onActivatedText: Item activated
+  onDeactivatedText: Item deactivated
+  deactivatedValue: 5
+  activatedValue: 10
+  deactivatedPatrolPath: {fileID: 0}
+  activatedPatrolPath: {fileID: 0}
+  deactivatedCombatTarget: {fileID: 0}
+  activatedCombatTaregt: {fileID: 0}
+  activateSound: {fileID: 0}
+  deactivateSound: {fileID: 0}
+  sleeperCoffinPrefab: {fileID: 1943952803858135967, guid: 2ac289bbbc05e9b4ba4afddcc3bbb075, type: 3}
+  sleeperCoffinSpawnPoint: {fileID: 5752352789990110883}
+--- !u!1 &5072839796195398051
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5752352789990110883}
+  m_Layer: 0
+  m_Name: SleeperCoffinSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5752352789990110883
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5072839796195398051}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.97, y: 5.176, z: 3.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 675483520161870642}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &445185720787985522
 PrefabInstance:
   m_ObjectHideFlags: 0
