@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 675483520161870642}
   - component: {fileID: 2106153771075050384}
   - component: {fileID: 7049508931593306674}
+  - component: {fileID: 7085499103943410810}
   m_Layer: 0
   m_Name: SleeperRoomControls
   m_TagString: Untagged
@@ -33,6 +34,7 @@ Transform:
   - {fileID: 8779394542645223672}
   - {fileID: 4063354411403287746}
   - {fileID: 5752352789990110883}
+  - {fileID: 9107837449752292923}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
@@ -89,6 +91,52 @@ MonoBehaviour:
   deactivateSound: {fileID: 0}
   sleeperCoffinPrefab: {fileID: 1943952803858135967, guid: 2ac289bbbc05e9b4ba4afddcc3bbb075, type: 3}
   sleeperCoffinSpawnPoint: {fileID: 5752352789990110883}
+--- !u!114 &7085499103943410810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162028151138664444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc7d102f8ae28924397f30ad2d34ef1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  propToMove: {fileID: 0}
+  endPosition: {fileID: 9107837449752292923}
+  startPosition: {fileID: 5752352789990110883}
+  movementSpeed: 1
+--- !u!1 &3868697830239465765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9107837449752292923}
+  m_Layer: 0
+  m_Name: SleeperCoffinEndPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9107837449752292923
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3868697830239465765}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.97, y: 5.176, z: 1.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 675483520161870642}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5072839796195398051
 GameObject:
   m_ObjectHideFlags: 0

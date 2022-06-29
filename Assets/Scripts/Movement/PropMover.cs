@@ -29,6 +29,11 @@ namespace RPG.Movement
             }
         }
 
+        public void SetPropToMove(Transform propToMove)
+        {
+            this.propToMove = propToMove;
+        }
+
         public void TriggerMoveToStart()
         {
             moveTowardStart = true;

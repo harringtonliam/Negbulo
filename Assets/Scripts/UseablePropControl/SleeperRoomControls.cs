@@ -29,6 +29,7 @@ namespace RPG.UseablePropControl
         [SerializeField] Transform sleeperCoffinSpawnPoint;
 
 
+
         ButtonColor[] selectedButtonColors = new ButtonColor[6];
 
 
@@ -59,9 +60,9 @@ namespace RPG.UseablePropControl
 
         private void SpawnSleeperCoffin()
         {
-            Debug.Log("Spawn sleeper Coffin");
             GameObject sleeperCoffin = GameObject.Instantiate(sleeperCoffinPrefab, sleeperCoffinSpawnPoint.position, Quaternion.identity, this.transform);
-            PropMover propMover = sleeperCoffin.GetComponent<PropMover>();
+            PropMover propMover = GetComponent<PropMover>();
+            propMover.SetPropToMove(sleeperCoffin.transform);
             propMover.TriggerMoveToEnd();
         }
 
