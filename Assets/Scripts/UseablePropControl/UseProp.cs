@@ -36,6 +36,7 @@ namespace RPG.UseablePropControl
 
         private void UseAblePropBehaviour()
         {
+            Debug.Log("USabelPropBehavior");
             transform.LookAt(target.transform);
             target.UseProp();
             //Liam 13/03/2022 don't think this is needed.  Removed to allow fr UI to hide when player moves away from prop

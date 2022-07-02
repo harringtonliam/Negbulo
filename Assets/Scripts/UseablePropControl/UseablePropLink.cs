@@ -23,6 +23,7 @@ namespace RPG.UseablePropControl
 
         public void DisplayUsePropUI(UseableProp useableProp)
         {
+            Debug.Log("DisplayUsePropUI");
             currentUseableProp = useableProp;
 
             SleeperRoomControls sleeperRoomControls = useableProp.GetComponent<SleeperRoomControls>();

@@ -31,6 +31,12 @@ namespace RPG.UI.UseableProps
         }
 
 
+        public void ResetControls()
+        {
+            SleeperRoomControls sleeperRoomControls = (SleeperRoomControls)useablePropLink.CurrentUsableProp;
+            sleeperRoomControls.ResetControls();
+        }
+
 
         private void ShowDisplay()
         { 

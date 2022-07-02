@@ -28,9 +28,7 @@ namespace RPG.UseablePropControl
         [SerializeField] GameObject sleeperCoffinPrefab;
         [SerializeField] Transform sleeperCoffinSpawnPoint;
 
-
-
-        ButtonColor[] selectedButtonColors = new ButtonColor[6];
+        ButtonColor[] selectedButtonColors = new ButtonColor[5];
 
 
         public ButtonColor[] SelectedButtonColors { get { return selectedButtonColors; } }
@@ -41,15 +39,20 @@ namespace RPG.UseablePropControl
         public event Action selectionConfirmed;
 
         private int currentButtonIndex = 0;
+        private GameObject sleeperCoffin = null;
+
+        PropMover propMover = null;
+
 
 
         public void SetColorOfCurrentButton(ButtonColor buttonColor)
         {
+            if (sleeperCoffin != null) return;
+
             SetButtonColor(currentButtonIndex, buttonColor);
             if(currentButtonIndex == selectedButtonColors.Length -1)
             {
                 SpawnSleeperCoffin();
-                ClearSelectedColors();
             }
             else
             {
@@ -60,8 +63,11 @@ namespace RPG.UseablePropControl
 
         private void SpawnSleeperCoffin()
         {
-            GameObject sleeperCoffin = GameObject.Instantiate(sleeperCoffinPrefab, sleeperCoffinSpawnPoint.position, Quaternion.identity, this.transform);
-            PropMover propMover = GetComponent<PropMover>();
+            if (propMover == null)
+            {
+                ReferencePropMover();
+            }
+            sleeperCoffin = GameObject.Instantiate(sleeperCoffinPrefab, sleeperCoffinSpawnPoint.position, Quaternion.identity, this.transform);
             propMover.SetPropToMove(sleeperCoffin.transform);
             propMover.TriggerMoveToEnd();
         }
@@ -74,8 +80,21 @@ namespace RPG.UseablePropControl
 
         public void ClearSelectedColors()
         {
-            selectedButtonColors = new ButtonColor[6];
+            selectedButtonColors = new ButtonColor[5];
+            currentButtonIndex = 0;
             CallEventSelectionUpdated();
+        }
+
+        public void ResetControls()
+        {
+
+            if (sleeperCoffin == null) return;
+            if (propMover == null)
+            {
+                ReferencePropMover();
+            }
+            propMover.SetPropToMove(sleeperCoffin.transform);
+            propMover.TriggerMoveToStart();
         }
 
         public void ConfirmSelection()
@@ -92,6 +111,18 @@ namespace RPG.UseablePropControl
             {
                 selectionUpdated();
             }
+        }
+
+        private void DestroySleeperCoffin()
+        {
+            Destroy(sleeperCoffin, 1f);
+        }
+
+        private void ReferencePropMover()
+        {
+            propMover = GetComponent<PropMover>();
+            propMover.reachedStartPoint += DestroySleeperCoffin;
+            propMover.reachedEndPoint += ClearSelectedColors;
         }
     }
 

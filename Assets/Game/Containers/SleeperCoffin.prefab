@@ -62,10 +62,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e77a4d3e558afb4eb202509950717b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventorySize: 2
+  inventorySize: 1
   inventorySlots:
-  - inventoryItem: {fileID: 11400000, guid: cc607d332f59d764fbeb8227c509646a, type: 2}
-    number: 0
+  - inventoryItem: {fileID: 11400000, guid: 60dc5d56babe9714f84845f9acef178f, type: 2}
+    number: 1
 --- !u!114 &6469416373081620101
 MonoBehaviour:
   m_ObjectHideFlags: 0

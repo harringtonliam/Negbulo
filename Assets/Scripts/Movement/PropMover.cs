@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 namespace RPG.Movement
 {
@@ -14,6 +15,9 @@ namespace RPG.Movement
 
         private bool moveTowardStart;
         private bool moveTowardEnd;
+
+        public event Action reachedStartPoint;
+        public event Action reachedEndPoint;
 
 
         // Update is called once per frame
@@ -51,6 +55,10 @@ namespace RPG.Movement
             if (Mathf.Approximately(distanceToClosed, 0f))
             {
                 moveTowardStart = false;
+                if (reachedStartPoint != null)
+                {
+                    reachedStartPoint();
+                }
             }
         }
 
@@ -61,6 +69,10 @@ namespace RPG.Movement
             if (Mathf.Approximately(distanceToClosed, 0f))
             {
                 moveTowardEnd = false;
+                if (reachedEndPoint != null)
+                {
+                    reachedEndPoint();
+                }
             }
         }
     }
