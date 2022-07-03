@@ -71,7 +71,6 @@ namespace RPG.UI.UseableProps
 
             for (int i = 0; i < sleeperRoomControls.SelectedButtonColors.Length; i++)
             {
-                Debug.Log("RedrawIndicaorLights: " + i.ToString() + " " + sleeperRoomControls.SelectedButtonColors[i].ToString());
                 var indicatorLight = Instantiate(indicatorLightPrefab, indicatorLightsPanel);
                 indicatorLight.GetComponent<Image>().color = GetButtonColor(sleeperRoomControls.SelectedButtonColors[i]);
             }

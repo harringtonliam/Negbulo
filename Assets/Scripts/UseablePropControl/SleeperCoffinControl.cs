@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using RPG.InventoryControl;
+using System;
 
 namespace RPG.UseablePropControl
 {
@@ -21,9 +23,33 @@ namespace RPG.UseablePropControl
         [SerializeField] Material sleeperCoffinOrange;
 
 
-        public ButtonColor[] ButtonColors { get { return buttonColors; } } 
+        public ButtonColor[] ButtonColors { get { return buttonColors; } }
 
-        public void SetButtonColors(ButtonColor[] buttonColors)
+        SleeperCoffinRegister sleeperCoffinRegister;
+
+        private void Start()
+        {
+            sleeperCoffinRegister = FindObjectOfType<SleeperCoffinRegister>();
+        }
+
+
+        public void SleeperCoffinSetup(ButtonColor[] buttonColors)
+        {
+            SetButtonColors(buttonColors);
+            SetCoffinContents(buttonColors);
+        }
+
+        private void SetCoffinContents(ButtonColor[] buttonColors)
+        {
+            sleeperCoffinRegister = FindObjectOfType<SleeperCoffinRegister>();
+
+            InventoryItem inventoryItem = sleeperCoffinRegister.GetCoffinContents(buttonColors);
+            Inventory inventory = GetComponent<Inventory>();
+            inventory.RemoveFromSlot(0, 1);
+            inventory.AddItemToSlot(0, inventoryItem, 1);
+        }
+
+        private void SetButtonColors(ButtonColor[] buttonColors)
         {
             this.buttonColors = buttonColors;
             for (int i = 0; i < this.buttonColors.Length; i++)

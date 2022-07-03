@@ -81,7 +81,6 @@ namespace RPG.UseablePropControl
 
         public void UseProp()
         {
-            Debug.Log("USe Prop");
             if(useablePropLink != null)
             {
                 useablePropLink.DisplayUsePropUI(this);

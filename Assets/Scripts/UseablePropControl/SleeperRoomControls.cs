@@ -121,7 +121,7 @@ namespace RPG.UseablePropControl
                 ReferencePropMover();
             }
             sleeperCoffin = GameObject.Instantiate(sleeperCoffinPrefab, sleeperCoffinSpawnPoint.position, Quaternion.identity, this.transform);
-            sleeperCoffin.GetComponent<SleeperCoffinControl>().SetButtonColors(selectedButtonColors);
+            sleeperCoffin.GetComponent<SleeperCoffinControl>().SleeperCoffinSetup(selectedButtonColors);
             propMover.SetPropToMove(sleeperCoffin.transform);
             propMover.TriggerMoveToEnd();
         }

@@ -153,10 +153,6 @@ MonoBehaviour:
   - {fileID: 9170718883926403681}
   - {fileID: 4566003205784411483}
   - {fileID: 3997056826106620166}
-  indicatorLight1: {fileID: 929125491783926860}
-  indicatorLight2: {fileID: 9170718883926403681}
-  indicatorLight3: {fileID: 4566003205784411483}
-  indicatorLight4: {fileID: 3997056826106620166}
   sleeperCoffinBlack: {fileID: 2100000, guid: 0c309bbc1e70b474c8dacb11c9d2052f, type: 2}
   sleeperCoffinWhite: {fileID: 2100000, guid: f3a937c517f775a4f94a517f481be672, type: 2}
   sleeperCoffinGray: {fileID: 2100000, guid: 400bfa63949b2c24db2d250831a95c78, type: 2}
@@ -181,7 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventorySize: 1
   inventorySlots:
-  - inventoryItem: {fileID: 11400000, guid: 60dc5d56babe9714f84845f9acef178f, type: 2}
+  - inventoryItem: {fileID: 11400000, guid: 749e0f728fe313140aed28bf13abbde7, type: 2}
     number: 1
 --- !u!114 &6469416373081620101
 MonoBehaviour:

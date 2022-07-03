@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2168409489105066489}
   - component: {fileID: 7864711616720041944}
   m_Layer: 0
-  m_Name: SleeperMan01Pickup
+  m_Name: SleeperManCPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,6 +115,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23987963776126432, guid: 101879632eab8164c8e253c6bbca0c2d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0c673a34921a40e41a11b1f96f70b371, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 101879632eab8164c8e253c6bbca0c2d, type: 3}
 --- !u!4 &7233475396239759374 stripped
