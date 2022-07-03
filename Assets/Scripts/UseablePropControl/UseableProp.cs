@@ -52,8 +52,8 @@ namespace RPG.UseablePropControl
         }
 
 
-        UseablePropLink useablePropLink;
-        GameConsole gameConsole;
+        protected UseablePropLink useablePropLink;
+        protected GameConsole gameConsole;
 
         private void Start()
         {

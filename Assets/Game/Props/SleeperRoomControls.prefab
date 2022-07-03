@@ -89,6 +89,7 @@ MonoBehaviour:
   deactivateSound: {fileID: 0}
   sleeperCoffinPrefab: {fileID: 1943952803858135967, guid: 2ac289bbbc05e9b4ba4afddcc3bbb075, type: 3}
   sleeperCoffinSpawnPoint: {fileID: 5752352789990110883}
+  defaultButtonColors: 0100000002000000
 --- !u!114 &7085499103943410810
 MonoBehaviour:
   m_ObjectHideFlags: 0
