@@ -10,28 +10,39 @@ namespace RPG.UseablePropControl
     {
         [SerializeField] InventoryItem[] availableSleepers = new InventoryItem[6];
 
-        Dictionary<ButtonColor[], InventoryItem> sleeperCoffins;
+        Dictionary<string, InventoryItem> sleeperCoffins;
 
         // Start is called before the first frame update
         void Start()
         {
             if (sleeperCoffins == null)
             {
-                sleeperCoffins = new Dictionary<ButtonColor[], InventoryItem>();
+                sleeperCoffins = new Dictionary<string, InventoryItem>();
             }
         }
 
         public InventoryItem  GetCoffinContents(ButtonColor[] buttonColors)
         {
 
-            Debug.Log("GetCoffinContents " + buttonColors[2].ToString());
-            if (!sleeperCoffins.ContainsKey(buttonColors))
+            string buttonColorsString = ConvertButtonArryToString(buttonColors);
+            if (!sleeperCoffins.ContainsKey(buttonColorsString))
             {
-                sleeperCoffins.Add(buttonColors, GenerateRandomSleeper());
+                sleeperCoffins.Add(buttonColorsString, GenerateRandomSleeper());
                 Debug.Log("slepperconffins size =  " + sleeperCoffins.Count);
 
             }
-            return sleeperCoffins[buttonColors];
+            return sleeperCoffins[buttonColorsString];
+        }
+
+        private string ConvertButtonArryToString(ButtonColor[] buttonColors)
+        {
+            System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            for (int i = 0; i < buttonColors.Length; i++)
+            {
+                sb.Append(buttonColors[i].ToString());
+                sb.Append(":");
+            }
+            return sb.ToString();
         }
 
         private InventoryItem GenerateRandomSleeper()
@@ -45,7 +56,7 @@ namespace RPG.UseablePropControl
         [System.Serializable]
         private struct SleeperCoffinRecord
         {
-            public ButtonColor[] buttonColors;
+            public string buttonColors;
             public string itemID;
         }
 
@@ -66,7 +77,7 @@ namespace RPG.UseablePropControl
         {
             if (sleeperCoffins == null)
             {
-                sleeperCoffins = new Dictionary<ButtonColor[], InventoryItem>();
+                sleeperCoffins = new Dictionary<string, InventoryItem>();
             }
             else
             {

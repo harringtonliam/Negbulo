@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using RPG.InventoryControl;
-using System;
 
 namespace RPG.UseablePropControl
 {
@@ -25,11 +24,13 @@ namespace RPG.UseablePropControl
 
         public ButtonColor[] ButtonColors { get { return buttonColors; } }
 
-        SleeperCoffinRegister sleeperCoffinRegister;
+        SleeperCoffinRegister sleeperCoffinRegister = null;
+        Inventory sleeperCoffinInventory = null;
 
         private void Start()
         {
             sleeperCoffinRegister = FindObjectOfType<SleeperCoffinRegister>();
+            sleeperCoffinInventory = GetComponent<Inventory>();
         }
 
 
