@@ -21,7 +21,7 @@ namespace RPG.UseablePropControl
             }
         }
 
-        public InventoryItem  GetCoffinContents(ButtonColor[] buttonColors)
+        public InventoryItem GetCoffinContents(ButtonColor[] buttonColors)
         {
 
             string buttonColorsString = ConvertButtonArryToString(buttonColors);
@@ -32,6 +32,15 @@ namespace RPG.UseablePropControl
 
             }
             return sleeperCoffins[buttonColorsString];
+        }
+
+        public void SetCoffinContents(ButtonColor[] buttonColors, InventoryItem inventoryItem)
+        {
+            string buttonColorsString = ConvertButtonArryToString(buttonColors);
+            if (sleeperCoffins.ContainsKey(buttonColorsString))
+            {
+                sleeperCoffins[buttonColorsString] = inventoryItem;
+            }
         }
 
         private string ConvertButtonArryToString(ButtonColor[] buttonColors)

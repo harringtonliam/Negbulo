@@ -29,9 +29,12 @@ namespace RPG.UseablePropControl
 
         private void Start()
         {
+
             sleeperCoffinRegister = FindObjectOfType<SleeperCoffinRegister>();
-            sleeperCoffinInventory = GetComponent<Inventory>();
+            ReferenceInventory();
+
         }
+
 
 
         public void SleeperCoffinSetup(ButtonColor[] buttonColors)
@@ -43,11 +46,15 @@ namespace RPG.UseablePropControl
         private void SetCoffinContents(ButtonColor[] buttonColors)
         {
             sleeperCoffinRegister = FindObjectOfType<SleeperCoffinRegister>();
+            ReferenceInventory();
 
             InventoryItem inventoryItem = sleeperCoffinRegister.GetCoffinContents(buttonColors);
-            Inventory inventory = GetComponent<Inventory>();
-            inventory.RemoveFromSlot(0, 1);
-            inventory.AddItemToSlot(0, inventoryItem, 1);
+            sleeperCoffinInventory.RemoveFromSlot(0, 1);
+            if (inventoryItem != null)
+            {
+                  sleeperCoffinInventory.AddItemToSlot(0, inventoryItem, 1);
+            }
+
         }
 
         private void SetButtonColors(ButtonColor[] buttonColors)
@@ -60,6 +67,24 @@ namespace RPG.UseablePropControl
 
         }
 
+        private void CheckCoffinInventory()
+        {
+            for (int i = 0; i < sleeperCoffinInventory.GetSize(); i++)
+            {
+                InventoryItem inventoryItem = sleeperCoffinInventory.GetItemInSlot(i);
+                sleeperCoffinRegister.SetCoffinContents(buttonColors, inventoryItem);
+
+            }
+        }
+
+        private void ReferenceInventory()
+        {
+            if (sleeperCoffinInventory == null)
+            {
+                sleeperCoffinInventory = GetComponent<Inventory>();
+                sleeperCoffinInventory.inventoryUpdated += CheckCoffinInventory;
+            }
+        }
 
         private Material SelectMaterial(ButtonColor buttonColor)
         {
