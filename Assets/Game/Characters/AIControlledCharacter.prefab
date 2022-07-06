@@ -338,6 +338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   infraRedEffect: {fileID: 8473776340402925838}
+  infraReditemId: a7e50ca9-d716-497b-9513-b70df3821bc9
 --- !u!114 &4415984554010688448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,7 +351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5547ff2762ea26f4ead53bbcb4215700, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aIRelationship: 0
+  aIRelationship: 1
   chaseDistance: 8
   suspicionTime: 2
   aggrevationCoolDownTime: 2
