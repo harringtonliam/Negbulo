@@ -19,3 +19,4 @@ MonoBehaviour:
   pickup: {fileID: 7864711616720041944, guid: aeca77ddc89640a4eb7d51f82bca8c19, type: 3}
   isStackable: 0
   maxNumberInStack: 1
+  characterPrefabToSpawn: {fileID: 4525562931291660730, guid: 7d998ffc0a224e248ae8e64bca3aee73, type: 3}
