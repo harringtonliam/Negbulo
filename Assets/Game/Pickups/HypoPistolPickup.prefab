@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5708907997363781927}
   - component: {fileID: 6907296280056774269}
   m_Layer: 0
-  m_Name: PistolLowQualityPickup
+  m_Name: HypoPistolPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

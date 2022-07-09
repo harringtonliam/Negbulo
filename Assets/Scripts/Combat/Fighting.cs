@@ -203,7 +203,7 @@ namespace RPG.Combat
             if (target == null) return false;
 
             Vector3 lineOfSightStart = currentWeaponConfig.GetTransform(rightHandTransform, leftHandTransform).position;
-            lineOfSightStart.x = lineOfSightStart.x + 0.15f;
+            lineOfSightStart.x = lineOfSightStart.x + 0.25f;
             Vector3 lineOfSightEnd = GetAimLocation();
 
             Vector3 lineOfSiteDirection = (lineOfSightEnd - lineOfSightStart).normalized;
