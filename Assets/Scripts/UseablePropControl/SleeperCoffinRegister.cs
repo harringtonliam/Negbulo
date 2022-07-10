@@ -9,6 +9,7 @@ namespace RPG.UseablePropControl
     public class SleeperCoffinRegister : MonoBehaviour, ISaveable
     {
         [SerializeField] InventoryItem[] availableSleepers = new InventoryItem[6];
+        [SerializeField] InventoryItem crewMember;
 
         Dictionary<string, InventoryItem> sleeperCoffins;
 

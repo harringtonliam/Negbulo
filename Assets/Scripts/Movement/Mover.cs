@@ -18,6 +18,8 @@ namespace RPG.Movement
         NavMeshAgent navMeshAgent;
         Health health;
 
+        public float MaxPathLength {  get { return maxPathLength; } set { maxPathLength = value; } }
+
         // Start is called before the first frame update
         void Start()
         {

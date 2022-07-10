@@ -22,6 +22,8 @@ namespace RPG.Control
         [SerializeField] float patrolSpeedFraction = 0.2f;
         [SerializeField] float shoutDistance = 5f;
         [SerializeField] GameObject combatTargetGameObject;
+        [SerializeField] Transform panicDestination;
+        [SerializeField] float panicDestinationTolerance = 5f;
 
         GameObject player;
         Mover mover;
@@ -32,11 +34,17 @@ namespace RPG.Control
         float timeSinceAggrevated = Mathf.Infinity;
         float timeAtWaypoint = Mathf.Infinity;
         int currentWaypointIndex = 0;
+        bool panic = false;
+
 
         public AIRelationship AIRelationship
         {
             get{ return aIRelationship;}
         }
+
+        public bool Panic { get { return panic; } set { panic = value; } }
+
+        public Transform PanicDestination { get { return panicDestination; }  set { panicDestination = value; } }
 
         private void Awake()
         {
@@ -62,11 +70,14 @@ namespace RPG.Control
 
             if (GetComponent<Health>().IsDead) return;
 
+            if (InteractWithPanic()) return;
             if (InteractWithCombat()) return;
             if (InteractWithSuspicsion()) return;
             if (InteractWithPatrolPath()) return;
             if (InteractWithGuardPosition()) return;
         }
+
+
 
         public void Aggrevate()
         {
@@ -82,6 +93,26 @@ namespace RPG.Control
         {
             patrolPath = newPatrolPath;
             currentWaypointIndex = 0;
+        }
+        private bool InteractWithPanic()
+        {
+            if (!panic) return false;
+            if (AtPanicDestination()) return false; ;
+            mover.StartMovementAction(panicDestination.position, 1f);
+            return panic;
+        }
+
+        private bool AtPanicDestination()
+        {
+            float distanceToPanciDestination = Vector3.Distance(transform.position, panicDestination.position);
+            if (distanceToPanciDestination <= panicDestinationTolerance)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public void SetCombatTarget(GameObject target)
