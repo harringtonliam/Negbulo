@@ -13,12 +13,18 @@ namespace RPG.UseablePropControl
 
         Dictionary<string, InventoryItem> sleeperCoffins;
 
+        CrewMemberSettings crewMemberSettings;
+
         // Start is called before the first frame update
         void Start()
         {
             if (sleeperCoffins == null)
             {
                 sleeperCoffins = new Dictionary<string, InventoryItem>();
+            }
+            if(crewMemberSettings == null)
+            {
+                crewMemberSettings = FindObjectOfType<CrewMemberSettings>();
             }
         }
 
@@ -28,7 +34,14 @@ namespace RPG.UseablePropControl
             string buttonColorsString = ConvertButtonArryToString(buttonColors);
             if (!sleeperCoffins.ContainsKey(buttonColorsString))
             {
-                sleeperCoffins.Add(buttonColorsString, GenerateRandomSleeper());
+                if (crewMemberSettings.IsCrewMember(buttonColors))
+                {
+                    sleeperCoffins.Add(buttonColorsString, crewMember);
+                }
+                else
+                {
+                    sleeperCoffins.Add(buttonColorsString, GenerateRandomSleeper());
+                }
                 Debug.Log("slepperconffins size =  " + sleeperCoffins.Count);
 
             }

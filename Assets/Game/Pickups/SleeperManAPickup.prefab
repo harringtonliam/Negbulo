@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20d932b5ab2db1d4787b7c01840aa673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryItem: {fileID: 11400000, guid: 60dc5d56babe9714f84845f9acef178f, type: 2}
+  inventoryItem: {fileID: 11400000, guid: 1777f5af2591e9d44bbe552fe948116f, type: 2}
   numberOfItems: 1
 --- !u!1001 &7238256558941937718
 PrefabInstance:
@@ -118,7 +118,7 @@ PrefabInstance:
     - target: {fileID: 23987963776126432, guid: 101879632eab8164c8e253c6bbca0c2d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: eaee0f11d6e5b7d4db338fedb688937e, type: 2}
+      objectReference: {fileID: 2100000, guid: 73847fc4fb99162448a1fe0fd636c712, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 101879632eab8164c8e253c6bbca0c2d, type: 3}
 --- !u!4 &7233475396239759374 stripped

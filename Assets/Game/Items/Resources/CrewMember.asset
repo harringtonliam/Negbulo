@@ -10,13 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 163ed8963643c3443a5daeb2110c1a50, type: 3}
-  m_Name: SleeperManA
+  m_Name: CrewMember
   m_EditorClassIdentifier: 
-  itemID: df781bae-8483-4591-a71e-356a35b7a8f5
-  displayName: Sleeping Man A
-  description: A man in cryo sleep.
+  itemID: 0f71e3ca-8c00-4339-802f-2de732ce3b4c
+  displayName: Crew Member
+  description: 'A Crew Member in Cryo Sleep
+
+'
   icon: {fileID: 21300000, guid: 716bae26aa0125a4885f9d152a5e5118, type: 3}
   pickup: {fileID: 7864711616720041944, guid: 28ce5cecae3db5f47bfdfea8dac47fc8, type: 3}
   isStackable: 0
   maxNumberInStack: 1
-  characterPrefabToSpawn: {fileID: 4525562931291660730, guid: 3017d44a961dd254dacd44eff005d50b, type: 3}
+  characterPrefabToSpawn: {fileID: 4525562931291660730, guid: f8bdf68cf0328fc44a65f3e0cee458a6, type: 3}

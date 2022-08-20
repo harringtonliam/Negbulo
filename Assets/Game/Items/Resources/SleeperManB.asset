@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 163ed8963643c3443a5daeb2110c1a50, type: 3}
   m_Name: SleeperManB
   m_EditorClassIdentifier: 
-  itemID: 174896e9-9e35-4298-896f-4b35a4895881
+  itemID: 36c68504-7676-4b50-8d3b-10af5822da43
   displayName: Sleeping Man B
   description: A man in cryo sleep.
   icon: {fileID: 21300000, guid: 247083e9168bb8a41a3bc4dee10e93f9, type: 3}

@@ -5,6 +5,7 @@ using UnityEngine;
 using RPG.Control;
 using RPG.Core;
 using RPG.Movement;
+using RPG.UseablePropControl;
 
 
 namespace RPG.InventoryControl
@@ -15,6 +16,8 @@ namespace RPG.InventoryControl
         [SerializeField] float kanarioHuntModeChaseDisatnce = 200f;
 
 
+        CrewMemberSettings crewMemberSettings;
+
         private Inventory inventory;
 
         // Start is called before the first frame update
@@ -22,6 +25,7 @@ namespace RPG.InventoryControl
         {
             inventory = GetComponent<Inventory>();
             inventory.inventoryUpdated += CheckForSleeper;
+            crewMemberSettings = FindObjectOfType<CrewMemberSettings>();
         }
 
         private void CheckForSleeper()
@@ -45,10 +49,14 @@ namespace RPG.InventoryControl
             if (sleeperPrefab != null)
             {
                 GameObject newSleeper = Instantiate(sleeperPrefab, spawnPoint.position, Quaternion.identity);
-                newSleeper.transform.parent = this.transform;
-                SetPanicMode(newSleeper); 
-                LockAllTheDoors();
-                SetKanarioToHunt();
+                if (!crewMemberSettings.IsItemCrewMember(sleeper))
+                {
+                    newSleeper.transform.parent = this.transform;
+                    SetPanicMode(newSleeper);
+                    LockAllTheDoors();
+                    SetKanarioToHunt();
+                }
+
             }
         }
 

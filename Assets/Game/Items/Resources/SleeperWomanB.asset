@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 163ed8963643c3443a5daeb2110c1a50, type: 3}
   m_Name: SleeperWomanB
   m_EditorClassIdentifier: 
-  itemID: 174896e9-9e35-4298-896f-4b35a4895881
+  itemID: dc14a0fa-32e4-4e02-a8bd-1db25bdc44b6
   displayName: Sleeping Woman B
   description: A woman in cryo sleep.
   icon: {fileID: 21300000, guid: 20c3690873cdb0d40b8bd5cbfa0d7656, type: 3}
