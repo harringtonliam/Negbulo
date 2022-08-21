@@ -161,6 +161,23 @@ MonoBehaviour:
   characterClass: 1
   progression: {fileID: 11400000, guid: d4d55fa51858af4428e0226a373eeea0, type: 2}
   levelUpPrefab: {fileID: 7572644742596159328, guid: ada0c63dd0f253146800f9fdd2b24e34, type: 3}
+--- !u!114 &6445802170179064567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3229769403555118710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff2f0c4b82b01f34186153fcbadd77d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clothingConfigs:
+  - inventoryItem: {fileID: 0}
+    characterMesh: {fileID: 7998492530711521327}
+  - inventoryItem: {fileID: 11400000, guid: 6cc9a9bc50b3d2d418de76fa4cbe3c62, type: 2}
+    characterMesh: {fileID: 8007177281774031235}
 --- !u!114 &6702567755074135476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -463,15 +480,39 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3229769403555118711}
     m_Modifications:
+    - target: {fileID: 1023137600908048, guid: 435b76befe3e2e941ad4553bb70dd50d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1234636854621290, guid: 435b76befe3e2e941ad4553bb70dd50d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1262378731156886, guid: 435b76befe3e2e941ad4553bb70dd50d, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316502338684588, guid: 435b76befe3e2e941ad4553bb70dd50d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360795401601386, guid: 435b76befe3e2e941ad4553bb70dd50d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1376662456316286, guid: 435b76befe3e2e941ad4553bb70dd50d, type: 3}
       propertyPath: m_Name
       value: SM_Chr_Cryo_Female_01
       objectReference: {fileID: 0}
     - target: {fileID: 1527366270148818, guid: 435b76befe3e2e941ad4553bb70dd50d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635095373166494, guid: 435b76befe3e2e941ad4553bb70dd50d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1937230025735322, guid: 435b76befe3e2e941ad4553bb70dd50d, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -519,6 +560,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23309142533008632, guid: 435b76befe3e2e941ad4553bb70dd50d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ed3bd972f89e47e42843b13fe786b1bc, type: 2}
+    - target: {fileID: 137809281563098504, guid: 435b76befe3e2e941ad4553bb70dd50d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ed3bd972f89e47e42843b13fe786b1bc, type: 2}
     - target: {fileID: 137959742763443116, guid: 435b76befe3e2e941ad4553bb70dd50d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -538,5 +587,15 @@ Transform:
 --- !u!1 &8004226857699651583 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1673901486197520, guid: 435b76befe3e2e941ad4553bb70dd50d, type: 3}
+  m_PrefabInstance: {fileID: 8003261080529626351}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8007177281774031235 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4080136925574508, guid: 435b76befe3e2e941ad4553bb70dd50d, type: 3}
+  m_PrefabInstance: {fileID: 8003261080529626351}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7998492530711521327 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4803871964761280, guid: 435b76befe3e2e941ad4553bb70dd50d, type: 3}
   m_PrefabInstance: {fileID: 8003261080529626351}
   m_PrefabAsset: {fileID: 0}
