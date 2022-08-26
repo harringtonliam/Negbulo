@@ -1,0 +1,347 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5613449154195728672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: 1722d396-8c3c-4414-8221-50f3053e8383
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogueText: An Agent?  That dosn't sound very likely.  You look like just a passenger
+    to me.
+  children:
+  - 1ace866a-eaf3-49c7-bf87-19c644dd783b
+  rect:
+    serializedVersion: 2
+    x: 586
+    y: 149
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and: []
+--- !u!114 &-2633204893292646319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: 0a1d06a2-0fad-421a-9a3c-d9b1dbc18c2c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  dialogueText: 'Thanks.  Are you ok?  You look a little pale.  '
+  children:
+  - ce17775b-8d4e-4001-bb5a-616d0a2b4cb7
+  rect:
+    serializedVersion: 2
+    x: 804
+    y: 323
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and: []
+--- !u!114 &-1687904798146686220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: adac030a-d6b7-43eb-89eb-3b8f77eb2899
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  dialogueText: There are intruders on the ship.  I need your help to get to the
+    flight deck.
+  children:
+  - 9dc7e0ef-bb33-45d2-b265-cd47b5e6c2a1
+  rect:
+    serializedVersion: 2
+    x: 304
+    y: 323
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and: []
+--- !u!114 &-934698882133385785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: 87069619-bbad-4f27-bdda-6c97363791eb
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogueText: Who are you?
+  children:
+  - 976c2d0d-6c54-4c55-9f8a-a45a72627ae4
+  rect:
+    serializedVersion: 2
+    x: 36
+    y: 144
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and:
+    - or:
+      - predicate: 2
+        parameters:
+        - 
+        negate: 1
+--- !u!114 &-554874014599610570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: 1ace866a-eaf3-49c7-bf87-19c644dd783b
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  dialogueText: No really I'm an agent.  I need your help to ge to the flight deck.
+  children:
+  - 91993626-5b67-48df-b64d-9ab7fa57aaae
+  rect:
+    serializedVersion: 2
+    x: 878
+    y: 140
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 095a95c4ffea4644ba71ebbf36814ac5, type: 3}
+  m_Name: Mowett
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -934698882133385785}
+  - {fileID: 8652308559698521714}
+  - {fileID: -5613449154195728672}
+  - {fileID: -554874014599610570}
+  - {fileID: 4465151660795473412}
+  - {fileID: 2522150550250114352}
+  - {fileID: -1687904798146686220}
+  - {fileID: 2789351601817129737}
+  - {fileID: -2633204893292646319}
+  - {fileID: 96647867452508767}
+  newNodeOffSet: {x: 250, y: 0}
+--- !u!114 &96647867452508767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: ce17775b-8d4e-4001-bb5a-616d0a2b4cb7
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogueText: I'm not sure.  I thik I just need to rest for a moment.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1054
+    y: 323
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and: []
+--- !u!114 &2522150550250114352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: 634c593d-3f34-4f93-9ac2-f4decd374a54
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogueText: You're an Agent?  Whats going on?
+  children:
+  - adac030a-d6b7-43eb-89eb-3b8f77eb2899
+  rect:
+    serializedVersion: 2
+    x: 54
+    y: 323
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and:
+    - or:
+      - predicate: 2
+        parameters:
+        - 
+        negate: 0
+--- !u!114 &2789351601817129737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: 9dc7e0ef-bb33-45d2-b265-cd47b5e6c2a1
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogueText: Let me give you my key.
+  children:
+  - 0a1d06a2-0fad-421a-9a3c-d9b1dbc18c2c
+  rect:
+    serializedVersion: 2
+    x: 554
+    y: 323
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and: []
+--- !u!114 &4465151660795473412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: 91993626-5b67-48df-b64d-9ab7fa57aaae
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  dialogueText: Passengers arn't allowed on the flight deck.  Leave me alone while
+    I rty to work out whas going on.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1154
+    y: 125
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and: []
+--- !u!114 &8652308559698521714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
+  m_Name: 976c2d0d-6c54-4c55-9f8a-a45a72627ae4
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  dialogueText: I'm an Agent.   I need your help.
+  children:
+  - 1722d396-8c3c-4414-8221-50f3053e8383
+  rect:
+    serializedVersion: 2
+    x: 310
+    y: 145
+    width: 200
+    height: 100
+  onEnterAction: 0
+  onEnterQuest: {fileID: 0}
+  onExitAction: 0
+  onExitQuest: {fileID: 0}
+  onEnterQuestObjective: 
+  onExitQuestObjective: 
+  onTriggerDialogueWithTag: 
+  condition:
+    and: []

@@ -178,6 +178,8 @@ MonoBehaviour:
     characterMesh: {fileID: 7998492530711521327}
   - inventoryItem: {fileID: 11400000, guid: 6cc9a9bc50b3d2d418de76fa4cbe3c62, type: 2}
     characterMesh: {fileID: 8007177281774031235}
+  - inventoryItem: {fileID: 11400000, guid: 6cc9a9bc50b3d2d418de76fa4cbe3c62, type: 2}
+    characterMesh: {fileID: 8006869403252328125}
 --- !u!114 &6702567755074135476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -482,7 +484,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1023137600908048, guid: 435b76befe3e2e941ad4553bb70dd50d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1234636854621290, guid: 435b76befe3e2e941ad4553bb70dd50d, type: 3}
       propertyPath: m_IsActive
@@ -582,6 +584,11 @@ Transform:
 --- !u!4 &8006938319614439277 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4240223956994946, guid: 435b76befe3e2e941ad4553bb70dd50d, type: 3}
+  m_PrefabInstance: {fileID: 8003261080529626351}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8006869403252328125 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4317509337604690, guid: 435b76befe3e2e941ad4553bb70dd50d, type: 3}
   m_PrefabInstance: {fileID: 8003261080529626351}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &8004226857699651583 stripped

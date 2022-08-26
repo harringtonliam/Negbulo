@@ -74,6 +74,19 @@ namespace RPG.InventoryControl
             return true;
         }
 
+        public void RemoveItem(InventoryItem item, int number)
+        {
+            int slot;
+            for (int i = 0; i < inventorySlots.Length; i++)
+            {
+                if (object.ReferenceEquals(inventorySlots[i].inventoryItem, item))
+                {
+                    RemoveFromSlot(i, number);
+                    break;
+                }
+            }
+        }
+
         public bool HasItem(InventoryItem item)
         {
             for (int i = 0; i < inventorySlots.Length; i++)

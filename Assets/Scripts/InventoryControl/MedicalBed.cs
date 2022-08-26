@@ -14,6 +14,7 @@ namespace RPG.InventoryControl
     {
         [SerializeField] Transform spawnPoint;
         [SerializeField] float kanarioHuntModeChaseDisatnce = 200f;
+        [SerializeField] Transform whereToGetUniform;
 
 
         CrewMemberSettings crewMemberSettings;
@@ -49,15 +50,26 @@ namespace RPG.InventoryControl
             if (sleeperPrefab != null)
             {
                 GameObject newSleeper = Instantiate(sleeperPrefab, spawnPoint.position, Quaternion.identity);
+                newSleeper.transform.parent = this.transform;
                 if (!crewMemberSettings.IsItemCrewMember(sleeper))
                 {
-                    newSleeper.transform.parent = this.transform;
                     SetPanicMode(newSleeper);
                     LockAllTheDoors();
                     SetKanarioToHunt();
                 }
+                else
+                {
+                    CrewMemberActions(newSleeper);
+                }
 
             }
+        }
+
+        private void CrewMemberActions(GameObject crewMember)
+        {
+            //TODO.  Is this necessary anymore?
+            //CrewMemberControler crewMemberController = crewMember.GetComponent<CrewMemberControler>();
+            //crewMemberController.GetUniform(whereToGetUniform);
         }
 
         private void SetKanarioToHunt()

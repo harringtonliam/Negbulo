@@ -49,7 +49,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventorySize: 12
-  inventorySlots: []
+  inventorySlots:
+  - inventoryItem: {fileID: 11400000, guid: 6cc9a9bc50b3d2d418de76fa4cbe3c62, type: 2}
+    number: 1
+  - inventoryItem: {fileID: 11400000, guid: 6cc9a9bc50b3d2d418de76fa4cbe3c62, type: 2}
+    number: 1
+  - inventoryItem: {fileID: 11400000, guid: 6cc9a9bc50b3d2d418de76fa4cbe3c62, type: 2}
+    number: 1
+  - inventoryItem: {fileID: 11400000, guid: 6cc9a9bc50b3d2d418de76fa4cbe3c62, type: 2}
+    number: 1
+  - inventoryItem: {fileID: 11400000, guid: 6cc9a9bc50b3d2d418de76fa4cbe3c62, type: 2}
+    number: 1
+  - inventoryItem: {fileID: 11400000, guid: 6cc9a9bc50b3d2d418de76fa4cbe3c62, type: 2}
+    number: 1
+  - inventoryItem: {fileID: 11400000, guid: 6cc9a9bc50b3d2d418de76fa4cbe3c62, type: 2}
+    number: 1
+  - inventoryItem: {fileID: 11400000, guid: 6cc9a9bc50b3d2d418de76fa4cbe3c62, type: 2}
+    number: 1
+  - inventoryItem: {fileID: 11400000, guid: 6cc9a9bc50b3d2d418de76fa4cbe3c62, type: 2}
+    number: 1
+  - inventoryItem: {fileID: 11400000, guid: 6cc9a9bc50b3d2d418de76fa4cbe3c62, type: 2}
+    number: 1
+  - inventoryItem: {fileID: 11400000, guid: 6cc9a9bc50b3d2d418de76fa4cbe3c62, type: 2}
+    number: 1
+  - inventoryItem: {fileID: 11400000, guid: 6cc9a9bc50b3d2d418de76fa4cbe3c62, type: 2}
+    number: 1
 --- !u!114 &3978054758515202994
 MonoBehaviour:
   m_ObjectHideFlags: 0

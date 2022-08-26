@@ -1,40 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8956018269158607686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05e3078929ffd704c9b58cf7f967ae98, type: 3}
-  m_Name: 99814e48-7567-4e82-99f9-c1cb3482596a
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  dialogueText: Don't bother me Private.  Proceed to the next test.
-  children: []
-  rect:
-    serializedVersion: 2
-    x: 19
-    y: 440
-    width: 200
-    height: 100
-  onEnterAction: 0
-  onEnterQuest: {fileID: 0}
-  onExitAction: 0
-  onExitQuest: {fileID: 0}
-  onEnterQuestObjective: 
-  onExitQuestObjective: 
-  onTriggerDialogueWithTag: 
-  condition:
-    and:
-    - or:
-      - predicate: 1
-        parameters:
-        - Training Mission 1
-        negate: 0
 --- !u!114 &-5690635506134797146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,5 +189,4 @@ MonoBehaviour:
   - {fileID: -934796662948168683}
   - {fileID: -1032251697358304104}
   - {fileID: -132209857164821285}
-  - {fileID: -8956018269158607686}
   newNodeOffSet: {x: 250, y: 0}
