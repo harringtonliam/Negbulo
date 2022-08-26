@@ -216,7 +216,7 @@ namespace RPG.Control
 
         private void PickupInventoryItem()
         {
-            Debug.Log("PickupInventoryItem");
+
 
             InventoryItem inventoryItem;
 
@@ -228,7 +228,6 @@ namespace RPG.Control
             }
             else if (itemToPickupContainer != null)
             {
-                Debug.Log("PickupInventoryItem container " + itemToPickupContainer.gameObject);
                 inventoryItem = itemToPickup;
                 Inventory containerInventory = itemToPickupContainer.GetComponent<Inventory>();
                 containerInventory.RemoveItem(inventoryItem, 1);
@@ -258,7 +257,6 @@ namespace RPG.Control
         private bool AtItemLocation(Vector3 itemLocation)
         {
             float distanceToItemLocation = Vector3.Distance(transform.position, itemLocation);
-            Debug.Log("distance to Item Location " + distanceToItemLocation.ToString());
             if (distanceToItemLocation <= waypointTolerance)
             {
                 return true;

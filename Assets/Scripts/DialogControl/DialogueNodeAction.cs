@@ -10,7 +10,8 @@ namespace RPG.DialogueControl
         None,
         GiveQuest,
         CompleteQuestObjective,
-        TriggerDialogue
+        TriggerDialogue,
+        GiveItem
     }
 
 }

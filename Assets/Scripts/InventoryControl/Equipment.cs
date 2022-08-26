@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using RPG.Saving;
 using System;
+using RPG.Core;
 
 namespace RPG.InventoryControl
 {
-    public class Equipment : MonoBehaviour, ISaveable
+    public class Equipment : MonoBehaviour, ISaveable, IPredicateEvaluator
     {
         Dictionary<EquipLocation, EquipableItem> equippedItems = new Dictionary<EquipLocation, EquipableItem>();
 
@@ -80,6 +81,33 @@ namespace RPG.InventoryControl
             }
         }
 
+        public bool? Evaluate(PredicateType predicate, string[] parameters)
+        {
+            switch (predicate)
+            {
+                case PredicateType.EquipedInventoryItem:
+                    return ItemEquiped(parameters[0]);
+            }
+
+            return null;
+        }
+
+        private bool ItemEquiped(string itemID)
+        {
+            InventoryItem inventoryItem = InventoryItem.GetFromID(itemID);
+            EquipableItem equipableItem = (EquipableItem)inventoryItem;
+            if(equipableItem == null)
+            {
+                return false;
+            }
+
+            if(GetItemInSlot(equipableItem.AllowedEquiplocation) == equipableItem)
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }
 

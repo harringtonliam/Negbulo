@@ -8,7 +8,8 @@ namespace  RPG.Core
     {
         HasQuest,
         CompletedQuest,
-        HasInvetoryItem
+        HasInvetoryItem,
+        EquipedInventoryItem
     }
 
 }

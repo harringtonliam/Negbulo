@@ -30,6 +30,8 @@ MonoBehaviour:
   onEnterQuestObjective: 
   onExitQuestObjective: 
   onTriggerDialogueWithTag: 
+  onEnterInventoryItem: {fileID: 0}
+  onExitInventoryItem: {fileID: 0}
   condition:
     and: []
 --- !u!114 &-2633204893292646319
@@ -54,13 +56,15 @@ MonoBehaviour:
     y: 323
     width: 200
     height: 100
-  onEnterAction: 0
+  onEnterAction: 4
   onEnterQuest: {fileID: 0}
   onExitAction: 0
   onExitQuest: {fileID: 0}
   onEnterQuestObjective: 
   onExitQuestObjective: 
   onTriggerDialogueWithTag: 
+  onEnterInventoryItem: {fileID: 11400000, guid: cc607d332f59d764fbeb8227c509646a, type: 2}
+  onExitInventoryItem: {fileID: 0}
   condition:
     and: []
 --- !u!114 &-1687904798146686220
@@ -93,6 +97,8 @@ MonoBehaviour:
   onEnterQuestObjective: 
   onExitQuestObjective: 
   onTriggerDialogueWithTag: 
+  onEnterInventoryItem: {fileID: 0}
+  onExitInventoryItem: {fileID: 0}
   condition:
     and: []
 --- !u!114 &-934698882133385785
@@ -124,12 +130,14 @@ MonoBehaviour:
   onEnterQuestObjective: 
   onExitQuestObjective: 
   onTriggerDialogueWithTag: 
+  onEnterInventoryItem: {fileID: 0}
+  onExitInventoryItem: {fileID: 0}
   condition:
     and:
     - or:
-      - predicate: 2
+      - predicate: 3
         parameters:
-        - 
+        - f6bdb313-5997-4554-b0e7-157697963ff3
         negate: 1
 --- !u!114 &-554874014599610570
 MonoBehaviour:
@@ -160,6 +168,8 @@ MonoBehaviour:
   onEnterQuestObjective: 
   onExitQuestObjective: 
   onTriggerDialogueWithTag: 
+  onEnterInventoryItem: {fileID: 0}
+  onExitInventoryItem: {fileID: 0}
   condition:
     and: []
 --- !u!114 &11400000
@@ -172,7 +182,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 095a95c4ffea4644ba71ebbf36814ac5, type: 3}
-  m_Name: Mowett
+  m_Name: CrewMember
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: -934698882133385785}
@@ -199,7 +209,7 @@ MonoBehaviour:
   m_Name: ce17775b-8d4e-4001-bb5a-616d0a2b4cb7
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  dialogueText: I'm not sure.  I thik I just need to rest for a moment.
+  dialogueText: I'm not sure.  I think I just need to rest for a moment.
   children: []
   rect:
     serializedVersion: 2
@@ -214,6 +224,8 @@ MonoBehaviour:
   onEnterQuestObjective: 
   onExitQuestObjective: 
   onTriggerDialogueWithTag: 
+  onEnterInventoryItem: {fileID: 0}
+  onExitInventoryItem: {fileID: 0}
   condition:
     and: []
 --- !u!114 &2522150550250114352
@@ -245,12 +257,14 @@ MonoBehaviour:
   onEnterQuestObjective: 
   onExitQuestObjective: 
   onTriggerDialogueWithTag: 
+  onEnterInventoryItem: {fileID: 0}
+  onExitInventoryItem: {fileID: 0}
   condition:
     and:
     - or:
-      - predicate: 2
+      - predicate: 3
         parameters:
-        - 
+        - f6bdb313-5997-4554-b0e7-157697963ff3
         negate: 0
 --- !u!114 &2789351601817129737
 MonoBehaviour:
@@ -281,6 +295,8 @@ MonoBehaviour:
   onEnterQuestObjective: 
   onExitQuestObjective: 
   onTriggerDialogueWithTag: 
+  onEnterInventoryItem: {fileID: 0}
+  onExitInventoryItem: {fileID: 0}
   condition:
     and: []
 --- !u!114 &4465151660795473412
@@ -312,6 +328,8 @@ MonoBehaviour:
   onEnterQuestObjective: 
   onExitQuestObjective: 
   onTriggerDialogueWithTag: 
+  onEnterInventoryItem: {fileID: 0}
+  onExitInventoryItem: {fileID: 0}
   condition:
     and: []
 --- !u!114 &8652308559698521714
@@ -343,5 +361,7 @@ MonoBehaviour:
   onEnterQuestObjective: 
   onExitQuestObjective: 
   onTriggerDialogueWithTag: 
+  onEnterInventoryItem: {fileID: 0}
+  onExitInventoryItem: {fileID: 0}
   condition:
     and: []

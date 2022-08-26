@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using RPG.Quests;
-
+using RPG.InventoryControl;
 using System;
 using RPG.Core;
 
@@ -27,6 +27,8 @@ namespace RPG.DialogueControl
         [SerializeField] string onEnterQuestObjective;
         [SerializeField] string onExitQuestObjective;
         [SerializeField] string onTriggerDialogueWithTag;
+        [SerializeField] InventoryItem onEnterInventoryItem;
+        [SerializeField] InventoryItem onExitInventoryItem;
         [SerializeField] Condition condition;
 
 
@@ -72,6 +74,16 @@ namespace RPG.DialogueControl
             {
                 return onExitAction;
             }
+        }
+
+        public InventoryItem OnEnterInventoryItem
+        {
+            get { return onEnterInventoryItem; }
+        }
+
+        public InventoryItem OnExitInventoryItem
+        {
+            get { return onExitInventoryItem; }
         }
 
         public Quest OnExitQuest

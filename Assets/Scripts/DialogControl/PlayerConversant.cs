@@ -7,6 +7,7 @@ using RPG.Attributes;
 using RPG.Core;
 using RPG.Movement;
 using RPG.Quests;
+using RPG.InventoryControl;
 
 
 namespace RPG.DialogueControl
@@ -214,6 +215,7 @@ namespace RPG.DialogueControl
 
         private void TriggerEnterAction()
         {
+            Debug.Log("trigger enter action: " + currentNode.DialogueText + " " + currentNode.OnExitAction.ToString());
             if (currentNode == null) return;
             if (currentNode.OnEnterAction == DialogueNodeAction.None) return;
             if (currentNode.OnEnterAction == DialogueNodeAction.GiveQuest)
@@ -228,10 +230,15 @@ namespace RPG.DialogueControl
             {
                 TriggerAction(currentNode.OnTriggerDialogueWithTag);
             }
+            else if (currentNode.OnEnterAction == DialogueNodeAction.GiveItem)
+            {
+                TriggerAction(currentNode.OnEnterInventoryItem);
+            }
         }
 
         private void TriggerExitAction()
         {
+            Debug.Log("trigger exit action: " + currentNode.DialogueText + " " +  currentNode.OnExitAction.ToString());
             if (currentNode == null) return;
             if (currentNode.OnExitAction == DialogueNodeAction.None) return;
             if (currentNode.OnExitAction == DialogueNodeAction.GiveQuest)
@@ -245,6 +252,10 @@ namespace RPG.DialogueControl
             else if(currentNode.OnExitAction== DialogueNodeAction.TriggerDialogue)
             {
                 TriggerAction(currentNode.OnTriggerDialogueWithTag);
+            }
+            else if(currentNode.OnExitAction == DialogueNodeAction.GiveItem)
+            {
+                TriggerAction(currentNode.OnExitInventoryItem);
             }
         }
 
@@ -269,6 +280,13 @@ namespace RPG.DialogueControl
             AIConversant aIConversant = triggerDialogWithObject.GetComponent<AIConversant>();
             if (aIConversant == null) return;
             QueueNextDialog(aIConversant, aIConversant.Dialogue);
+        }
+
+        private void TriggerAction(InventoryItem inventoryItem)
+        {
+            Debug.Log("trigger action inventory item");
+            Inventory inventory = GetComponent<Inventory>();
+            inventory.AddToFirstEmptySlot(inventoryItem, 1);
         }
 
         private void QueueNextDialog(AIConversant aIConversant, Dialogue dialogue)
