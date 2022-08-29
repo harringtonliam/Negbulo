@@ -688,6 +688,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4890892346126784322}
     m_Modifications:
+    - target: {fileID: 3123049504247774391, guid: 5ba3cf79e1b51474d9f792444a531e9a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4115638952301478170, guid: 5ba3cf79e1b51474d9f792444a531e9a, type: 3}
       propertyPath: m_Name
       value: Speach

@@ -42,7 +42,6 @@ namespace RPG.UseablePropControl
                 {
                     sleeperCoffins.Add(buttonColorsString, GenerateRandomSleeper());
                 }
-                Debug.Log("slepperconffins size =  " + sleeperCoffins.Count);
 
             }
             return sleeperCoffins[buttonColorsString];

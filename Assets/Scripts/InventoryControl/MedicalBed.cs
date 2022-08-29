@@ -14,10 +14,13 @@ namespace RPG.InventoryControl
     {
         [SerializeField] Transform spawnPoint;
         [SerializeField] float kanarioHuntModeChaseDisatnce = 200f;
+        [SerializeField] float timeToWaitBeforeWaking = 2f;
+        [SerializeField] GameObject lights;
 
 
 
         CrewMemberSettings crewMemberSettings;
+        Pickup pickup;
 
         private Inventory inventory;
 
@@ -35,21 +38,30 @@ namespace RPG.InventoryControl
 
             for (int i = 0; i < inventory.GetSize(); i++)
             {
-                sleeper = (Sleeper)inventory.GetItemInSlot(i);
+                if (inventory.GetItemInSlot(i) != null && inventory.GetItemInSlot(i).GetType() == typeof(Sleeper))
+                {
+                    sleeper = (Sleeper)inventory.GetItemInSlot(i);
+                }
                 if (sleeper != null)
                 {
-                    WakeSleeper(sleeper);
-                    inventory.RemoveFromSlot(i, 1);
+                    StartCoroutine(WakeSleeper(sleeper, i));
                 }
             }
         }
 
-        private void WakeSleeper(Sleeper sleeper)
+        private IEnumerator WakeSleeper(Sleeper sleeper, int inventorySlot)
         {
+            if (lights != null)
+            {
+                lights.SetActive(true);
+            }
+            yield return new WaitForSeconds(timeToWaitBeforeWaking);
             GameObject sleeperPrefab = sleeper.CharacterPrefabToSpawn;
             if (sleeperPrefab != null)
             {
+                GameObject.Destroy(pickup);
                 GameObject newSleeper = Instantiate(sleeperPrefab, spawnPoint.position, Quaternion.identity);
+                inventory.RemoveFromSlot(inventorySlot, 1);
                 newSleeper.transform.parent = this.transform;
                 if (!crewMemberSettings.IsItemCrewMember(sleeper))
                 {
@@ -58,6 +70,10 @@ namespace RPG.InventoryControl
                     SetKanarioToHunt();
                     RedAlertLights();
                 }
+            }
+            if (lights != null)
+            {
+                lights.SetActive(false);
             }
         }
 
@@ -98,6 +114,8 @@ namespace RPG.InventoryControl
             }
 
         }
+
+
     }
 }
 

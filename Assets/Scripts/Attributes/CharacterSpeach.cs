@@ -14,9 +14,6 @@ namespace RPG.Attributes
         [SerializeField] bool displaySpeachTrigger = true;
         [SerializeField] Canvas rootCanvas = null;
 
-        int speachTextIndex = 0;
-
-
 
         public string[] SpeachText
         {
@@ -28,37 +25,28 @@ namespace RPG.Attributes
         {
             if (displaySpeachTrigger)
             {
-                TriggerSpeach(displaySpeachTrigger);
+                StartCoroutine(DisplaySpeach());
             }
         }
 
         public void TriggerSpeach(bool displaySpeach)
         {
-            if (displaySpeach && speachText.Length >0)
-            {
-                rootCanvas.enabled = true;
-                StartCoroutine(DisplaySpeach());
-            }
-            else
-            {
-                rootCanvas.enabled = false;
-                StopCoroutine(DisplaySpeach());
-            }
-
+            StartCoroutine(DisplaySpeach());
         }
 
 
 
         private IEnumerator DisplaySpeach()
         {
-            Debug.Log("Display Speach");
-            if (speachTextIndex >= speachText.Length)
+            for (int i = 0; i < speachText.Length; i++)
             {
-                speachTextIndex = 0;
+                rootCanvas.enabled = true;
+                speachTextUI.text = speachText[i];
+                yield return new WaitForSeconds(timeToDisplaySpeachFor);
             }
-            speachTextUI.text = speachText[speachTextIndex];
-            speachTextIndex++;
-            yield return new WaitForSeconds(timeToDisplaySpeachFor);
+
+            rootCanvas.enabled = false;
+
         }
     }
 

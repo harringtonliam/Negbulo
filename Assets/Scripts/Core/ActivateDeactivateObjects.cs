@@ -11,8 +11,6 @@ namespace RPG.Core
 
         public void ActivatetDeactivate(bool activate)
         {
-            Debug.Log("Activate deactivate");
-
             foreach (var item in objectsToActivate)
             {
                 item.SetActive(activate);

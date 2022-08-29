@@ -328,11 +328,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1284494895901034912, guid: dc9e9b5ac38c7e24e8f111585ee2ba2f, type: 3}
       propertyPath: displaySpeachTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1284494895901034912, guid: dc9e9b5ac38c7e24e8f111585ee2ba2f, type: 3}
       propertyPath: speachText.Array.size
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1284494895901034912, guid: dc9e9b5ac38c7e24e8f111585ee2ba2f, type: 3}
       propertyPath: speachText.Array.data[0]

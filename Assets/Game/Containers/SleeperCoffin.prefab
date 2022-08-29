@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 6469416373081620101}
   - component: {fileID: 5578467440372195517}
   - component: {fileID: 5582248399881725424}
+  - component: {fileID: 8214058306294969039}
   m_Layer: 0
   m_Name: SleeperCoffin
   m_TagString: Untagged
@@ -131,6 +132,7 @@ Transform:
   - {fileID: 1800006190393892846}
   - {fileID: 6543847712923602974}
   - {fileID: 222722885948421105}
+  - {fileID: 2217430629417124972}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -218,6 +220,49 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.3008912, z: 3.175648}
   m_Center: {x: 0, y: 0.62094104, z: 0.0103520155}
+--- !u!114 &8214058306294969039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943952803858135967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31320cb563f4da844832d0ebc0c986b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupPoint: {fileID: 2217430629417124972}
+--- !u!1 &3088624516938173764
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2217430629417124972}
+  m_Layer: 0
+  m_Name: PickupPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2217430629417124972
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3088624516938173764}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.75, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4747585225103283532}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3997056826106620166
 GameObject:
   m_ObjectHideFlags: 0
