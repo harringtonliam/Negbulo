@@ -215,7 +215,6 @@ namespace RPG.DialogueControl
 
         private void TriggerEnterAction()
         {
-            Debug.Log("trigger enter action: " + currentNode.DialogueText + " " + currentNode.OnExitAction.ToString());
             if (currentNode == null) return;
             if (currentNode.OnEnterAction == DialogueNodeAction.None) return;
             if (currentNode.OnEnterAction == DialogueNodeAction.GiveQuest)
@@ -238,7 +237,6 @@ namespace RPG.DialogueControl
 
         private void TriggerExitAction()
         {
-            Debug.Log("trigger exit action: " + currentNode.DialogueText + " " +  currentNode.OnExitAction.ToString());
             if (currentNode == null) return;
             if (currentNode.OnExitAction == DialogueNodeAction.None) return;
             if (currentNode.OnExitAction == DialogueNodeAction.GiveQuest)
@@ -284,7 +282,6 @@ namespace RPG.DialogueControl
 
         private void TriggerAction(InventoryItem inventoryItem)
         {
-            Debug.Log("trigger action inventory item");
             Inventory inventory = GetComponent<Inventory>();
             inventory.AddToFirstEmptySlot(inventoryItem, 1);
         }

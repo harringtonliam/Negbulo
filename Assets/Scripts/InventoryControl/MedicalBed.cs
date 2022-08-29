@@ -14,7 +14,7 @@ namespace RPG.InventoryControl
     {
         [SerializeField] Transform spawnPoint;
         [SerializeField] float kanarioHuntModeChaseDisatnce = 200f;
-        [SerializeField] Transform whereToGetUniform;
+
 
 
         CrewMemberSettings crewMemberSettings;
@@ -56,21 +56,11 @@ namespace RPG.InventoryControl
                     SetPanicMode(newSleeper);
                     LockAllTheDoors();
                     SetKanarioToHunt();
+                    RedAlertLights();
                 }
-                else
-                {
-                    CrewMemberActions(newSleeper);
-                }
-
             }
         }
 
-        private void CrewMemberActions(GameObject crewMember)
-        {
-            //TODO.  Is this necessary anymore?
-            //CrewMemberControler crewMemberController = crewMember.GetComponent<CrewMemberControler>();
-            //crewMemberController.GetUniform(whereToGetUniform);
-        }
 
         private void SetKanarioToHunt()
         {
@@ -97,6 +87,16 @@ namespace RPG.InventoryControl
             AIControler aIControler = newSleeper.GetComponent<AIControler>();
             aIControler.PanicDestination = GameObject.FindGameObjectWithTag("Kanario").transform;
             aIControler.Panic = true;
+        }
+
+        private void RedAlertLights()
+        {
+            ActivateDeactivateObjects activateDeactivateObjects = GetComponent<ActivateDeactivateObjects>();
+            if (activateDeactivateObjects != null)
+            {
+                activateDeactivateObjects.ActivatetDeactivate(true);
+            }
+
         }
     }
 }

@@ -151,6 +151,10 @@ PrefabInstance:
       propertyPath: characterName
       value: Mowett
       objectReference: {fileID: 0}
+    - target: {fileID: 2495368262781755688, guid: b72337fea2f75304d914f9fe47f9cec4, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2637017441006678282, guid: b72337fea2f75304d914f9fe47f9cec4, type: 3}
       propertyPath: dialogue
       value: 

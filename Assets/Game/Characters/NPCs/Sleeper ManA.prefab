@@ -78,6 +78,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2495368262781755688, guid: b72337fea2f75304d914f9fe47f9cec4, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2645524332560208306, guid: b72337fea2f75304d914f9fe47f9cec4, type: 3}
       propertyPath: leftHandTransform
       value: 
@@ -141,6 +145,10 @@ PrefabInstance:
     - target: {fileID: 6644507162611458065, guid: b72337fea2f75304d914f9fe47f9cec4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9053667309760745097, guid: b72337fea2f75304d914f9fe47f9cec4, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b72337fea2f75304d914f9fe47f9cec4, type: 3}

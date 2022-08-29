@@ -326,6 +326,26 @@ PrefabInstance:
       propertyPath: characterAbilities.Array.data[5].abilityValue
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 1284494895901034912, guid: dc9e9b5ac38c7e24e8f111585ee2ba2f, type: 3}
+      propertyPath: displaySpeachTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1284494895901034912, guid: dc9e9b5ac38c7e24e8f111585ee2ba2f, type: 3}
+      propertyPath: speachText.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1284494895901034912, guid: dc9e9b5ac38c7e24e8f111585ee2ba2f, type: 3}
+      propertyPath: speachText.Array.data[0]
+      value: Line 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1284494895901034912, guid: dc9e9b5ac38c7e24e8f111585ee2ba2f, type: 3}
+      propertyPath: speachText.Array.data[1]
+      value: LIne 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1284494895901034912, guid: dc9e9b5ac38c7e24e8f111585ee2ba2f, type: 3}
+      propertyPath: speachText.Array.data[2]
+      value: LIne 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1889934385504813977, guid: dc9e9b5ac38c7e24e8f111585ee2ba2f, type: 3}
       propertyPath: rank
       value: Private
@@ -405,6 +425,10 @@ PrefabInstance:
     - target: {fileID: 4890892346126784323, guid: dc9e9b5ac38c7e24e8f111585ee2ba2f, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5665991428631512902, guid: dc9e9b5ac38c7e24e8f111585ee2ba2f, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6603573004805197937, guid: dc9e9b5ac38c7e24e8f111585ee2ba2f, type: 3}
       propertyPath: armourClassValue
