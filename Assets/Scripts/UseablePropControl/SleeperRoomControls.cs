@@ -26,7 +26,7 @@ namespace RPG.UseablePropControl
     public class SleeperRoomControls : UseableProp
     {
         [SerializeField] GameObject sleeperCoffinPrefab;
-        [SerializeField] Transform sleeperCoffinSpawnPoint;
+        [SerializeField] Transform[] sleeperCoffinSpawnPoints;
         [SerializeField] ButtonColor[] defaultButtonColors = new ButtonColor[2];
 
         ButtonColor[] selectedButtonColors = new ButtonColor[5];
@@ -120,10 +120,12 @@ namespace RPG.UseablePropControl
             {
                 ReferencePropMover();
             }
-            sleeperCoffin = GameObject.Instantiate(sleeperCoffinPrefab, sleeperCoffinSpawnPoint.position, Quaternion.identity, this.transform);
+            int randomSpawnPoint = UnityEngine.Random.Range(0, sleeperCoffinSpawnPoints.Length);
+
+            sleeperCoffin = GameObject.Instantiate(sleeperCoffinPrefab, sleeperCoffinSpawnPoints[randomSpawnPoint].position, Quaternion.identity, this.transform);
             sleeperCoffin.GetComponent<SleeperCoffinControl>().SleeperCoffinSetup(selectedButtonColors);
             propMover.SetPropToMove(sleeperCoffin.transform);
-            propMover.TriggerMoveToEnd();
+            //propMover.TriggerMoveToEnd();
         }
 
 
