@@ -20,6 +20,7 @@ namespace RPG.UseablePropControl
         [SerializeField] Material sleeperCoffinMagenta;
         [SerializeField] Material sleeperCoffinRed;
         [SerializeField] Material sleeperCoffinOrange;
+        [SerializeField] GameObject cover;
 
 
         public ButtonColor[] ButtonColors { get { return buttonColors; } }
@@ -41,6 +42,11 @@ namespace RPG.UseablePropControl
         {
             SetButtonColors(buttonColors);
             SetCoffinContents(buttonColors);
+        }
+
+        public void DisplayCover(bool display)
+        {
+            cover.SetActive(display);
         }
 
         private void SetCoffinContents(ButtonColor[] buttonColors)

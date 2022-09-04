@@ -19,6 +19,8 @@ namespace RPG.Movement
         public event Action reachedStartPoint;
         public event Action reachedEndPoint;
 
+        public Transform StartPosition {  get { return startPosition; } set { startPosition = value; } }
+        public Transform EndPosition {  get { return endPosition; } set { endPosition = value; } }
 
         // Update is called once per frame
         void Update()
