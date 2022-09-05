@@ -70,7 +70,6 @@ namespace RPG.UseablePropControl
         private InventoryItem GenerateRandomSleeper()
         {
             int randomIndex = Random.Range(0, availableSleepers.Length);
-            Debug.Log("GenerateRandomSleeper " + randomIndex.ToString());
             return availableSleepers[randomIndex];
         }
 

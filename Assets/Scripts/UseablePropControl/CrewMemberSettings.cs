@@ -31,7 +31,6 @@ namespace RPG.UseablePropControl
 
             for (int i = 0; i < crewMemberColors.Length; i++)
             {
-                Debug.Log("IsCrewMember  " + i.ToString() + " : " + buttonColors[i].ToString() + " compa to "  + crewMemberColors[i].ToString());
                 if (buttonColors[i] != crewMemberColors[i])
                 {
                     returnValue = false;

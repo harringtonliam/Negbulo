@@ -26,9 +26,7 @@ namespace RPG.UseablePropControl
     public class SleeperRoomControls : UseableProp
     {
         [SerializeField] GameObject sleeperCoffinPrefab;
-        [SerializeField] GameObject[] sleeperCoffinWallPanels;
-        [SerializeField] Transform[] sleeperCoffinSpawnPoints;
-        [SerializeField] Transform[] sleeperCoffinEndPoints;
+        [SerializeField] SleeperCoffinHatch[] sleeperCoffinHatchs;
         [SerializeField] ButtonColor[] defaultButtonColors = new ButtonColor[2];
 
         ButtonColor[] selectedButtonColors = new ButtonColor[5];
@@ -41,6 +39,9 @@ namespace RPG.UseablePropControl
 
         private int currentButtonIndex = 0;
         private GameObject sleeperCoffin = null;
+
+        private Transform currentCoffinStartTransform;
+        private Transform currentCoffinEndTransform;
 
         PropMover propMover = null;
         int randomCoffin = 0;
@@ -86,8 +87,7 @@ namespace RPG.UseablePropControl
                 ReferencePropMover();
             }
             propMover.SetPropToMove(sleeperCoffin.transform);
-            sleeperCoffin.GetComponent<SleeperCoffinControl>().DisplayCover(true);
-            propMover.StartPosition = sleeperCoffinSpawnPoints[randomCoffin];
+            propMover.StartPosition = currentCoffinStartTransform;
             propMover.TriggerMoveToStart();
         }
 
@@ -125,15 +125,17 @@ namespace RPG.UseablePropControl
             {
                 ReferencePropMover();
             }
-            randomCoffin = 0;// UnityEngine.Random.Range(0, sleeperCoffinSpawnPoints.Length);
+            randomCoffin = UnityEngine.Random.Range(0, sleeperCoffinHatchs.Length);
 
-            Vector3 spawnPositon = sleeperCoffinSpawnPoints[randomCoffin].position;
+            currentCoffinStartTransform = sleeperCoffinHatchs[randomCoffin].CoffinStartPosition;
+            currentCoffinEndTransform = sleeperCoffinHatchs[randomCoffin].CoffinEndPosition;
 
-            sleeperCoffin = GameObject.Instantiate(sleeperCoffinPrefab, spawnPositon, sleeperCoffinSpawnPoints[randomCoffin].rotation, this.transform);
-            sleeperCoffinWallPanels[randomCoffin].SetActive(false);
+            sleeperCoffin = GameObject.Instantiate(sleeperCoffinPrefab, currentCoffinStartTransform.position, sleeperCoffinHatchs[randomCoffin].transform.rotation, this.transform);
+            sleeperCoffinHatchs[randomCoffin].DisplayVFX(true);
+            sleeperCoffinHatchs[randomCoffin].DisplayHatchCover(false);
             sleeperCoffin.GetComponent<SleeperCoffinControl>().SleeperCoffinSetup(selectedButtonColors);
             propMover.SetPropToMove(sleeperCoffin.transform);
-            propMover.EndPosition = sleeperCoffinEndPoints[randomCoffin];
+            propMover.EndPosition = currentCoffinEndTransform;
             propMover.TriggerMoveToEnd();
         }
 
@@ -153,13 +155,14 @@ namespace RPG.UseablePropControl
         private void CoffinHasMovedOut()
         {
             ResetSelectedColors();
-            sleeperCoffin.GetComponent<SleeperCoffinControl>().DisplayCover(false);
         }
 
         private void CoffinHasMovedBack()
         {
-            sleeperCoffinWallPanels[randomCoffin].SetActive(true);
+            sleeperCoffinHatchs[randomCoffin].gameObject.SetActive(true);
             DestroySleeperCoffin();
+            sleeperCoffinHatchs[randomCoffin].DisplayVFX(false);
+            sleeperCoffinHatchs[randomCoffin].DisplayHatchCover(true); ;
         }
     }
 

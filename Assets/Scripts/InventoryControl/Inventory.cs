@@ -76,7 +76,6 @@ namespace RPG.InventoryControl
 
         public void RemoveItem(InventoryItem item, int number)
         {
-            int slot;
             for (int i = 0; i < inventorySlots.Length; i++)
             {
                 if (object.ReferenceEquals(inventorySlots[i].inventoryItem, item))

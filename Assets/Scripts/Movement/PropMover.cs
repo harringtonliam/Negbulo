@@ -54,7 +54,7 @@ namespace RPG.Movement
         {
             propToMove.position = Vector3.MoveTowards(propToMove.position, startPosition.position, movementSpeed * Time.deltaTime);
             float distanceToClosed = Vector3.Distance(propToMove.position, startPosition.position);
-            if (Mathf.Approximately(distanceToClosed, 0f))
+            if (distanceToClosed < 0.01f)
             {
                 moveTowardStart = false;
                 if (reachedStartPoint != null)
@@ -68,7 +68,7 @@ namespace RPG.Movement
         {
             propToMove.position = Vector3.MoveTowards(propToMove.position, endPosition.position, movementSpeed * Time.deltaTime);
             float distanceToClosed = Vector3.Distance(propToMove.position, endPosition.position);
-            if (Mathf.Approximately(distanceToClosed, 0f))
+            if (distanceToClosed < 0.01f)
             {
                 moveTowardEnd = false;
                 if (reachedEndPoint != null)
