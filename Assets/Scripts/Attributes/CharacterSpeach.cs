@@ -9,7 +9,7 @@ namespace RPG.Attributes
     public class CharacterSpeach : MonoBehaviour
     {
         [SerializeField] TextMeshProUGUI speachTextUI;
-        [SerializeField] float timeToDisplaySpeachFor;
+        [SerializeField] float timeToDisplaySpeachFor = 1.5f;
         [SerializeField] string[] speachText;
         [SerializeField] bool displaySpeachTrigger = true;
         [SerializeField] Canvas rootCanvas = null;

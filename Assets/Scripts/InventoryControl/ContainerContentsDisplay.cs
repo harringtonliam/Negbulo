@@ -36,7 +36,8 @@ namespace RPG.InventoryControl
                 if(item != null)
                 {
                     pickup = item.SpawnPickup(pickupPoint.position, 1);
-                    pickup.transform.rotation = this.transform.rotation;
+                    pickup.transform.parent = pickupPoint.transform;
+                    pickup.transform.rotation = pickupPoint.transform.rotation;
                 }
             }
         }

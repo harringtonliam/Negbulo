@@ -87,10 +87,6 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1025283524545298163, guid: b72337fea2f75304d914f9fe47f9cec4, type: 3}
-      propertyPath: timeToDisplaySpeachFor
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1025283524545298163, guid: b72337fea2f75304d914f9fe47f9cec4, type: 3}
       propertyPath: speachText.Array.data[0]
       value: Help!
       objectReference: {fileID: 0}
@@ -114,6 +110,10 @@ PrefabInstance:
       propertyPath: rightHandTransform
       value: 
       objectReference: {fileID: 2621942589474433321}
+    - target: {fileID: 2751345800240237611, guid: b72337fea2f75304d914f9fe47f9cec4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5374191039255380555, guid: b72337fea2f75304d914f9fe47f9cec4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

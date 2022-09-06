@@ -87,10 +87,6 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1025283524545298163, guid: b72337fea2f75304d914f9fe47f9cec4, type: 3}
-      propertyPath: timeToDisplaySpeachFor
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1025283524545298163, guid: b72337fea2f75304d914f9fe47f9cec4, type: 3}
       propertyPath: speachText.Array.data[0]
       value: Help!
       objectReference: {fileID: 0}
