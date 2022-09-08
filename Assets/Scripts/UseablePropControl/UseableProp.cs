@@ -12,7 +12,7 @@ namespace RPG.UseablePropControl
 
     public class UseableProp : MonoBehaviour, IRaycastable
     {
-        [SerializeField] bool isActivated = false;
+        [SerializeField] protected bool isActivated = false;
         [SerializeField] UnityEvent<bool> useProp;
         [SerializeField] UnityEvent<float> usePropFloat;
         [SerializeField] UnityEvent<PatrolPath> usePropPatrolPath;
@@ -33,8 +33,8 @@ namespace RPG.UseablePropControl
         [SerializeField] PatrolPath activatedPatrolPath;
         [SerializeField] GameObject deactivatedCombatTarget;
         [SerializeField] GameObject activatedCombatTaregt;
-        [SerializeField] AudioSource activateSound;
-        [SerializeField] AudioSource deactivateSound;
+        [SerializeField] protected AudioSource activateSound;
+        [SerializeField] protected AudioSource deactivateSound;
 
         public string DisplayText
         {
@@ -87,8 +87,9 @@ namespace RPG.UseablePropControl
             }
         }
 
-        public void SetPropActivatedStatus(bool activatedStatus)
+        public virtual void SetPropActivatedStatus(bool activatedStatus)
         {
+            Debug.Log("SetPropActivatedStatus orig ");
             isActivated = activatedStatus;
             useProp.Invoke(isActivated);
             if (isActivated)

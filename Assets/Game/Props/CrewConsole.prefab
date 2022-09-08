@@ -168,8 +168,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3230418249770589873}
-  - component: {fileID: 8439724319484826915}
   - component: {fileID: 1052444917150111590}
+  - component: {fileID: 59957250999742131}
   m_Layer: 0
   m_Name: CrewConsole
   m_TagString: Untagged
@@ -193,7 +193,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8439724319484826915
+--- !u!65 &1052444917150111590
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7538432149740727468}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.5830898, y: 4.6560655, z: 1}
+  m_Center: {x: -1.3028793, y: 1.0531166, z: 0}
+--- !u!114 &59957250999742131
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -202,7 +215,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7538432149740727468}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 721f623e932153f49b9ad97f8718e978, type: 3}
+  m_Script: {fileID: 11500000, guid: cd5a25e4918e19b44bde2c3e49a6042c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isActivated: 0
@@ -218,11 +231,12 @@ MonoBehaviour:
   usePropCombatTarget:
     m_PersistentCalls:
       m_Calls: []
-  displayText: This thing does stuff
-  activateText: Item activated
-  deactivateText: Item deactivated
-  onActivatedText: Item activated
-  onDeactivatedText: Item deactivated
+  displayText: Most of the functions available from this console appear to have been
+    disabled, but you can see one option that might do something.
+  activateText: Permesi
+  deactivateText: Nuligi
+  onActivatedText: Something has been added to your inventory.
+  onDeactivatedText: You leave the console alone.
   deactivatedValue: 5
   activatedValue: 10
   deactivatedPatrolPath: {fileID: 0}
@@ -231,19 +245,9 @@ MonoBehaviour:
   activatedCombatTaregt: {fileID: 0}
   activateSound: {fileID: 231995372493503261}
   deactivateSound: {fileID: 2400704272130753503}
---- !u!65 &1052444917150111590
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7538432149740727468}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.5830898, y: 4.6560655, z: 1}
-  m_Center: {x: -1.3028793, y: 1.0531166, z: 0}
+  itemsToGive:
+  - inventoryItem: {fileID: 11400000, guid: 9f89caba5b0ff9a4286054a00ff74e87, type: 2}
+    number: 1
 --- !u!1 &7541694490281620470
 GameObject:
   m_ObjectHideFlags: 0

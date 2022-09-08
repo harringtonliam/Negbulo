@@ -39,7 +39,7 @@ namespace RPG.Control
         bool panic = false;
         Pickup itemToPickupPickup;
         Container itemToPickupContainer;
-        bool pickupLoactionFound = false;
+        bool pickupLocationFound = false;
 
 
         public AIRelationship AIRelationship
@@ -179,10 +179,10 @@ namespace RPG.Control
                 return false;
             }
 
-            pickupLoactionFound = false;
+            pickupLocationFound = false;
             itemToPickupPickup = GetNearestPickup();
             itemToPickupContainer = GetNearestContainer();
-            if (!pickupLoactionFound) return false;
+            if (!pickupLocationFound) return false;
             if (itemToPickupPickup != null && itemToPickupContainer == null)
             {
                 nearestItemLocation = itemToPickupPickup.transform.position;
@@ -206,7 +206,6 @@ namespace RPG.Control
 
             if (AtItemLocation(nearestItemLocation))
             {
-                Debug.Log("At Item Location");
                 PickupInventoryItem();
                 return false;
             }
@@ -366,7 +365,7 @@ namespace RPG.Control
                     {
                         shortestDistance = distanceToContainer;
                         nearestContainer = i;
-                        pickupLoactionFound = true;
+                        pickupLocationFound = true;
                     }
                 }
             }
@@ -377,6 +376,7 @@ namespace RPG.Control
         private Pickup GetNearestPickup()
         {
             Pickup[] pickups = FindObjectsOfType<Pickup>();
+            if(pickups.Length <= 0) return null;
             float distanceToPickup;
             float shortestDistance = float.MaxValue;
             int nearestPickup = 0;
@@ -389,7 +389,7 @@ namespace RPG.Control
                     {
                         shortestDistance = distanceToPickup;
                         nearestPickup = i;
-                        pickupLoactionFound = true;
+                        pickupLocationFound = true;
                     }
                 }
             }

@@ -14,6 +14,8 @@ namespace RPG.UseablePropControl
 
         ButtonColor[] crewMemberColors;
 
+        public ButtonColor[] CrewMemberColors { get { return crewMemberColors; } }
+
         // Start is called before the first frame update
         void Start()
         {
