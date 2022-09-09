@@ -11,11 +11,30 @@ namespace RPG.InventoryControl
     public class SystemPad : ActionItem
     {
 
-        CrewMemberSettings crewMemberSettings;
-
-        public event Action systemPadUse;
 
         public override void Use(GameObject user)
+        {
+            WriteToGameConsole();
+            DisplaySytemPadUI();
+
+        }
+
+        public ButtonColor[] GetButtonColors()
+        {
+            CrewMemberSettings crewMemberSettings = FindObjectOfType<CrewMemberSettings>();
+            return crewMemberSettings.CrewMemberColors;
+        }
+
+        private void DisplaySytemPadUI()
+        {
+            ActionItemLink actionItemLink = FindObjectOfType<ActionItemLink>();
+            if (actionItemLink != null)
+            {
+                actionItemLink.DisplayActionItemUI(this);
+            }
+        }
+
+        private void WriteToGameConsole()
         {
             CrewMemberSettings crewMemberSettings = FindObjectOfType<CrewMemberSettings>();
             System.Text.StringBuilder consoleText = new System.Text.StringBuilder();
@@ -28,9 +47,6 @@ namespace RPG.InventoryControl
             }
 
             WriteToConsole(consoleText.ToString());
-
-            systemPadUse();
-
         }
 
         private void WriteToConsole(string textToWrite)
