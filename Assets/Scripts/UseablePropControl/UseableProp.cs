@@ -24,9 +24,9 @@ namespace RPG.UseablePropControl
         [TextArea]
         [SerializeField] string deactivateText = "Click to deactivate this item";
         [TextArea]
-        [SerializeField] string onActivatedText = "Item activated";
+        [SerializeField] protected string onActivatedText = "Item activated";
         [TextArea]
-        [SerializeField] string onDeactivatedText = "Item deactivated";
+        [SerializeField] protected string onDeactivatedText = "Item deactivated";
         [SerializeField] float deactivatedValue = 5f;
         [SerializeField] float activatedValue = 10f;
         [SerializeField] PatrolPath deactivatedPatrolPath;
@@ -35,6 +35,8 @@ namespace RPG.UseablePropControl
         [SerializeField] GameObject activatedCombatTaregt;
         [SerializeField] protected AudioSource activateSound;
         [SerializeField] protected AudioSource deactivateSound;
+        [SerializeField] protected bool isDisabled = false;
+        [SerializeField] protected string isDisabledText = "This thing has been disabled.";
 
         public string DisplayText
         {
@@ -81,6 +83,11 @@ namespace RPG.UseablePropControl
 
         public void UseProp()
         {
+            if (isDisabled)
+            {
+                WriteToConsole(isDisabledText);
+                return;
+            }
             if(useablePropLink != null)
             {
                 useablePropLink.DisplayUsePropUI(this);
@@ -89,7 +96,6 @@ namespace RPG.UseablePropControl
 
         public virtual void SetPropActivatedStatus(bool activatedStatus)
         {
-            Debug.Log("SetPropActivatedStatus orig ");
             isActivated = activatedStatus;
             useProp.Invoke(isActivated);
             if (isActivated)
@@ -118,7 +124,7 @@ namespace RPG.UseablePropControl
 
         }
 
-        private void WriteToConsole(string textToWrite)
+        protected void WriteToConsole(string textToWrite)
         {
             if (gameConsole == null) return;
 

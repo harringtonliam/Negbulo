@@ -23,18 +23,17 @@ namespace RPG.UseablePropControl
 
         public override void SetPropActivatedStatus(bool activatedStatus)
         {
-            Debug.Log("SetPropActivatedStatus new ");
-
             isActivated = activatedStatus;
+            isDisabled = true;
 
             Inventory inventory = GetPlayerInventory();
 
             foreach (var item in itemsToGive)
             {
-                Debug.Log("SetPropActivatedStatus foreach");
                 inventory.AddToFirstEmptySlot(item.inventoryItem, item.number);
             }
 
+            WriteToConsole(onActivatedText);
 
             if (isActivated && activateSound != null)
             {
