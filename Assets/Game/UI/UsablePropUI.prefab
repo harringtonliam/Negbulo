@@ -803,7 +803,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayText: {fileID: 8857679083922782983}
   activateButtonText: {fileID: 5290605716648222180}
-  deaactivateButtonText: {fileID: 4721718895939565800}
+  deactivateButtonText: {fileID: 4721718895939565800}
   closeButton: {fileID: 6568423455476963045}
   activateButton: {fileID: 3494460695092314510}
   deactivateButton: {fileID: 344931234345898659}

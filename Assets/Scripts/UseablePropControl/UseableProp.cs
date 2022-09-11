@@ -53,6 +53,9 @@ namespace RPG.UseablePropControl
             get { return deactivateText; }
         }
 
+        public bool IsDisabled { get { return isDisabled; } }
+        public string IsDisabledText {  get { return isDisabledText; } }
+
 
         protected UseablePropLink useablePropLink;
         protected GameConsole gameConsole;
@@ -83,11 +86,6 @@ namespace RPG.UseablePropControl
 
         public void UseProp()
         {
-            if (isDisabled)
-            {
-                WriteToConsole(isDisabledText);
-                return;
-            }
             if(useablePropLink != null)
             {
                 useablePropLink.DisplayUsePropUI(this);

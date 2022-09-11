@@ -1709,16 +1709,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2496838811172894673}
     m_Modifications:
-    - target: {fileID: 59957250999742131, guid: 676236279195cd54abb3a39dc759e19e, type: 3}
-      propertyPath: displayText
-      value: Most of the functions on this console are disabled, but you can see
-        one option that might do something.
-      objectReference: {fileID: 0}
-    - target: {fileID: 59957250999742131, guid: 676236279195cd54abb3a39dc759e19e, type: 3}
-      propertyPath: onActivatedText
-      value: The console bleeps and dispenses a system pad.  You take it and add
-        it to your inventory.
-      objectReference: {fileID: 0}
     - target: {fileID: 3230418249770589873, guid: 676236279195cd54abb3a39dc759e19e, type: 3}
       propertyPath: m_RootOrder
       value: 24

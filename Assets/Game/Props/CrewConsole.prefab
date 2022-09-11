@@ -231,11 +231,12 @@ MonoBehaviour:
   usePropCombatTarget:
     m_PersistentCalls:
       m_Calls: []
-  displayText: Most of the functions available from this console appear to have been
-    disabled, but you can see one option that might do something.
+  displayText: Most of the functions on this console are disabled, but you can see
+    one option that might do something.
   activateText: Permesi
   deactivateText: Nuligi
-  onActivatedText: Something has been added to your inventory.
+  onActivatedText: The console bleeps and dispenses a system pad.  You take it and
+    add it to your inventory.
   onDeactivatedText: You leave the console alone.
   deactivatedValue: 5
   activatedValue: 10
@@ -245,6 +246,8 @@ MonoBehaviour:
   activatedCombatTaregt: {fileID: 0}
   activateSound: {fileID: 231995372493503261}
   deactivateSound: {fileID: 2400704272130753503}
+  isDisabled: 0
+  isDisabledText: All the conolse functions are disabled now.
   itemsToGive:
   - inventoryItem: {fileID: 11400000, guid: 9f89caba5b0ff9a4286054a00ff74e87, type: 2}
     number: 1

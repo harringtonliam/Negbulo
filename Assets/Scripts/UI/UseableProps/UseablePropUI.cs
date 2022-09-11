@@ -12,7 +12,7 @@ namespace RPG.UI.UseableProps
     {
         [SerializeField] TextMeshProUGUI displayText;
         [SerializeField] TextMeshProUGUI activateButtonText;
-        [SerializeField] TextMeshProUGUI deaactivateButtonText;
+        [SerializeField] TextMeshProUGUI deactivateButtonText;
         [SerializeField] Button closeButton;
         [SerializeField] Button activateButton;
         [SerializeField] Button deactivateButton;
@@ -38,10 +38,15 @@ namespace RPG.UI.UseableProps
         private void ShowDisplay()
         {
             if (usablePropLink == null) return;
+            if(usablePropLink.CurrentUsableProp.IsDisabled)
+            {
+                DisableTheUI();
+                return;
+            }
 
             displayText.text = usablePropLink.CurrentUsableProp.DisplayText;
             activateButtonText.text = usablePropLink.CurrentUsableProp.ActivateText;
-            deaactivateButtonText.text = usablePropLink.CurrentUsableProp.DeactivateText;
+            deactivateButtonText.text = usablePropLink.CurrentUsableProp.DeactivateText;
             player.GetComponent<UseProp>().onUsePropCancel += HideDisplay;
 
             if (usablePropLink.CurrentUsableProp.ActivateText == string.Empty)
@@ -53,6 +58,16 @@ namespace RPG.UI.UseableProps
                 actionCanvas.SetActive(true);
             }
 
+            uiCanvas.SetActive(true);
+        }
+
+        private void DisableTheUI()
+        {
+            displayText.text = usablePropLink.CurrentUsableProp.IsDisabledText;
+            activateButtonText.text = usablePropLink.CurrentUsableProp.ActivateText;
+            deactivateButtonText.text = usablePropLink.CurrentUsableProp.DeactivateText;
+            activateButton.gameObject.SetActive(false);
+            deactivateButton.gameObject.SetActive(false);
             uiCanvas.SetActive(true);
         }
 
