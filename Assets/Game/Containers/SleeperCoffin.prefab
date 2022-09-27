@@ -152,16 +152,16 @@ MonoBehaviour:
   - {fileID: 9170718883926403681}
   - {fileID: 4566003205784411483}
   - {fileID: 3997056826106620166}
-  sleeperCoffinBlack: {fileID: 2100000, guid: 0c309bbc1e70b474c8dacb11c9d2052f, type: 2}
-  sleeperCoffinWhite: {fileID: 2100000, guid: f3a937c517f775a4f94a517f481be672, type: 2}
-  sleeperCoffinGray: {fileID: 2100000, guid: 400bfa63949b2c24db2d250831a95c78, type: 2}
-  sleeperCoffinGreen: {fileID: 2100000, guid: aa068ca422d3acf4888d3ade74dc855d, type: 2}
-  sleeperCoffinBlue: {fileID: 2100000, guid: b44a506fe54692b4d87238284675b95b, type: 2}
-  sleeperCoffinYellow: {fileID: 2100000, guid: 464f290cd40fae7428e31b9dad402038, type: 2}
-  sleeperCoffinCyan: {fileID: 2100000, guid: 7244f84f409e9dc44b395b48cdf4cb36, type: 2}
-  sleeperCoffinMagenta: {fileID: 2100000, guid: 2ac89a7f39bc29d4b8c38bc0788f8cb6, type: 2}
-  sleeperCoffinRed: {fileID: 2100000, guid: 6cbfc349a8464dd40964e63cd4884708, type: 2}
-  sleeperCoffinOrange: {fileID: 2100000, guid: dc377b4304110f146b779493ebe6ccc3, type: 2}
+  sleeperCoffinBlack: {fileID: 2100000, guid: 3c5875fc958e7364583ee77312200dd9, type: 2}
+  sleeperCoffinWhite: {fileID: 2100000, guid: 80fecc42fc667594b8b6cba2488c5df8, type: 2}
+  sleeperCoffinGray: {fileID: 2100000, guid: f63a0a2511653024eb4300e34a1b6c0b, type: 2}
+  sleeperCoffinGreen: {fileID: 2100000, guid: da78dd1cf6e30b54bb30c03295014957, type: 2}
+  sleeperCoffinBlue: {fileID: 2100000, guid: 1d5f93b0119b3fa41801886532cc9743, type: 2}
+  sleeperCoffinYellow: {fileID: 2100000, guid: f505fb3df2891824cbc2a7499a62e852, type: 2}
+  sleeperCoffinCyan: {fileID: 2100000, guid: 0afbb4210ce902e4ba7324eb8d548986, type: 2}
+  sleeperCoffinMagenta: {fileID: 2100000, guid: 67c5682e42789034bacb0bd3889b99d9, type: 2}
+  sleeperCoffinRed: {fileID: 2100000, guid: 71201b5f80e80f444a9d73eeed19c32b, type: 2}
+  sleeperCoffinOrange: {fileID: 2100000, guid: d29dece9f26c96e44b9480e950de4ab0, type: 2}
 --- !u!114 &2801613693234025985
 MonoBehaviour:
   m_ObjectHideFlags: 0
