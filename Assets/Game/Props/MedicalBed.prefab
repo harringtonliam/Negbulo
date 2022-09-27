@@ -56,7 +56,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b03271ecafddf2d4d972bd8285f97aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uniqueIdentifier: 
+  uniqueIdentifier: dd8a9961-3bca-4e07-a9fa-a9e49517a3bc
 --- !u!114 &4398787176753206371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,8 +127,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17e011227e6e6ec41a09b26ed81e39e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectsToActivate: []
-  objectsToDeactivate: []
+  objectsToActivate:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  objectsToDeactivate:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &6689883545925534729
 MonoBehaviour:
   m_ObjectHideFlags: 0
