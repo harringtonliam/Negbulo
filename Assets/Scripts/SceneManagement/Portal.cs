@@ -16,7 +16,7 @@ namespace RPG.SceneManagement
     {
         [SerializeField] float fadeTime = 2f;
 
-        enum DesintationIdentifier
+        public enum DesintationIdentifier
         {
             A, B, C, D, E
         }
@@ -24,6 +24,16 @@ namespace RPG.SceneManagement
         [SerializeField] string sceneToLoad = "Level2";
         [SerializeField] Transform spawnPoint;
         [SerializeField] DesintationIdentifier destinationIdentifier;
+
+        public void SetSceneToLoad(string newSceneToLoad, DesintationIdentifier newDesintationIdentifier )
+        {
+            sceneToLoad = newSceneToLoad;
+            destinationIdentifier = newDesintationIdentifier;
+        }
+        public void SetSceneToLoad(string newSceneToLoad)
+        {
+            sceneToLoad = newSceneToLoad;
+        }
 
         private void OnTriggerEnter(Collider other)
         {
