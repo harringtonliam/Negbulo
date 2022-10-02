@@ -26,13 +26,9 @@ namespace RPG.InventoryControl
         {
             equipment = GetComponent<Equipment>();
             equipment.equipmentUpdated += SetClothing;
+            SetClothing();
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
 
         void SetClothing()
         {

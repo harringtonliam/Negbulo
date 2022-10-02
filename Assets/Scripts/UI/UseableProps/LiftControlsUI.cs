@@ -24,10 +24,10 @@ public class LiftControlsUI : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Close()
     {
-        
+        player.GetComponent<UseProp>().Cancel();
+        HideDisplay();
     }
 
     private void ShowDisplay()
@@ -44,10 +44,6 @@ public class LiftControlsUI : MonoBehaviour
         uiCanvas.SetActive(false);
     }
 
-    private void Close()
-    {
-        player.GetComponent<UseProp>().Cancel();
-        HideDisplay();
-    }
+
 
 }

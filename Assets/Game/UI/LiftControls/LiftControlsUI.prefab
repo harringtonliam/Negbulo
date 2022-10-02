@@ -609,6 +609,10 @@ PrefabInstance:
       propertyPath: buttonColor
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8807929317488879352, guid: fe2969516b65d78479a326389235f7ec, type: 3}
+      propertyPath: liftControlsUI
+      value: 
+      objectReference: {fileID: 4952950630074861250}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe2969516b65d78479a326389235f7ec, type: 3}
 --- !u!224 &5793744242653957156 stripped
@@ -731,6 +735,10 @@ PrefabInstance:
       propertyPath: buttonColor
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8807929317488879352, guid: fe2969516b65d78479a326389235f7ec, type: 3}
+      propertyPath: liftControlsUI
+      value: 
+      objectReference: {fileID: 4952950630074861250}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe2969516b65d78479a326389235f7ec, type: 3}
 --- !u!224 &8528960447369667480 stripped
@@ -845,6 +853,10 @@ PrefabInstance:
       propertyPath: buttonColor
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 8807929317488879352, guid: fe2969516b65d78479a326389235f7ec, type: 3}
+      propertyPath: liftControlsUI
+      value: 
+      objectReference: {fileID: 4952950630074861250}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe2969516b65d78479a326389235f7ec, type: 3}
 --- !u!224 &8322527720452084380 stripped
@@ -963,6 +975,10 @@ PrefabInstance:
       propertyPath: buttonColor
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 8807929317488879352, guid: fe2969516b65d78479a326389235f7ec, type: 3}
+      propertyPath: liftControlsUI
+      value: 
+      objectReference: {fileID: 4952950630074861250}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe2969516b65d78479a326389235f7ec, type: 3}
 --- !u!224 &8785427787094126056 stripped
@@ -1081,6 +1097,10 @@ PrefabInstance:
       propertyPath: buttonColor
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8807929317488879352, guid: fe2969516b65d78479a326389235f7ec, type: 3}
+      propertyPath: liftControlsUI
+      value: 
+      objectReference: {fileID: 4952950630074861250}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe2969516b65d78479a326389235f7ec, type: 3}
 --- !u!224 &7415722512207422759 stripped
@@ -1199,6 +1219,10 @@ PrefabInstance:
       propertyPath: buttonColor
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8807929317488879352, guid: fe2969516b65d78479a326389235f7ec, type: 3}
+      propertyPath: liftControlsUI
+      value: 
+      objectReference: {fileID: 4952950630074861250}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe2969516b65d78479a326389235f7ec, type: 3}
 --- !u!224 &2057205469351314951 stripped
@@ -1301,6 +1325,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8807929317488879352, guid: fe2969516b65d78479a326389235f7ec, type: 3}
+      propertyPath: liftControlsUI
+      value: 
+      objectReference: {fileID: 4952950630074861250}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe2969516b65d78479a326389235f7ec, type: 3}
 --- !u!224 &816289589433906095 stripped
@@ -1415,6 +1443,10 @@ PrefabInstance:
       propertyPath: buttonColor
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 8807929317488879352, guid: fe2969516b65d78479a326389235f7ec, type: 3}
+      propertyPath: liftControlsUI
+      value: 
+      objectReference: {fileID: 4952950630074861250}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe2969516b65d78479a326389235f7ec, type: 3}
 --- !u!224 &4432715682096944593 stripped
@@ -1529,6 +1561,10 @@ PrefabInstance:
       propertyPath: buttonColor
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 8807929317488879352, guid: fe2969516b65d78479a326389235f7ec, type: 3}
+      propertyPath: liftControlsUI
+      value: 
+      objectReference: {fileID: 4952950630074861250}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe2969516b65d78479a326389235f7ec, type: 3}
 --- !u!224 &2478162612415644535 stripped
@@ -1647,6 +1683,10 @@ PrefabInstance:
       propertyPath: buttonColor
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 8807929317488879352, guid: fe2969516b65d78479a326389235f7ec, type: 3}
+      propertyPath: liftControlsUI
+      value: 
+      objectReference: {fileID: 4952950630074861250}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe2969516b65d78479a326389235f7ec, type: 3}
 --- !u!224 &3228457832303077039 stripped

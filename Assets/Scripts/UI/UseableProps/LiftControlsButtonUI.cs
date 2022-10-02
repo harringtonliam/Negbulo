@@ -11,9 +11,11 @@ namespace RPG.UI.UseableProps
     {
 
         [SerializeField] ButtonColor buttonColor;
+        [SerializeField] LiftControlsUI liftControlsUI;
 
         Button controlButton;
         UseablePropLink useablePropLink;
+
 
         // Start is called before the first frame update
         void Start()
@@ -25,12 +27,15 @@ namespace RPG.UI.UseableProps
 
         private void Button_onClick()
         {
-            Debug.Log("Lift Cotrol button click");
-
             if (useablePropLink == null) return;
 
             LiftControls liftControls = (LiftControls)useablePropLink.CurrentUsableProp;
             liftControls.ButtonPressed(buttonColor);
+
+            if (liftControlsUI != null)
+            {
+                liftControlsUI.Close();
+            }
         }
     }
 }
