@@ -78,17 +78,26 @@ namespace RPG.UseablePropControl
         private struct SleeperCoffinRecord
         {
             public string buttonColors;
-            public string itemID;
+            public string? itemID;
         }
 
         public object CaptureState()
         {
             var records = new SleeperCoffinRecord[sleeperCoffins.Count];
+            Debug.Log("Sleeper Cofin Register Capture State" + sleeperCoffins.Count);
             int i = 0;
             foreach (var sleeperCoffin in sleeperCoffins)
             {
                 records[i].buttonColors = sleeperCoffin.Key;
-                records[i].itemID = sleeperCoffin.Value.ItemID;
+                if (sleeperCoffin.Value == null)
+                {
+                    records[i].itemID = null;
+                }
+                else
+                {
+                    records[i].itemID = sleeperCoffin.Value.ItemID;
+                }
+                
                 i++;
             }
             return records;
@@ -104,8 +113,10 @@ namespace RPG.UseablePropControl
             {
                 sleeperCoffins.Clear();
             }
+            Debug.Log("Sleeper Cofin Register RestoreState");
 
             var records = (SleeperCoffinRecord[])state;
+            Debug.Log("Sleeper Cofin Register RestoreState records ");
             for (int i = 0; i < records.Length; i++)
             {
                 sleeperCoffins.Add(records[i].buttonColors, InventoryItem.GetFromID(records[i].itemID));

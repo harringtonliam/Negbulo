@@ -6609,7 +6609,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1843387653220361290, guid: cb83dd1a19a596f4f9f898079f2858aa, type: 3}
       propertyPath: m_Lens.FieldOfView
-      value: 48.80003
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1853587753270253614, guid: cb83dd1a19a596f4f9f898079f2858aa, type: 3}
       propertyPath: m_AnchorMax.y
@@ -8661,7 +8661,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6120606088224538977, guid: cb83dd1a19a596f4f9f898079f2858aa, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -2.0313568
+      value: -2.0314255
       objectReference: {fileID: 0}
     - target: {fileID: 6140228463794034460, guid: cb83dd1a19a596f4f9f898079f2858aa, type: 3}
       propertyPath: m_AnchorMax.y
@@ -9213,7 +9213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7697537132079151906, guid: cb83dd1a19a596f4f9f898079f2858aa, type: 3}
       propertyPath: field of view
-      value: 48.80003
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7781443301985454963, guid: cb83dd1a19a596f4f9f898079f2858aa, type: 3}
       propertyPath: m_AnchorMax.y
