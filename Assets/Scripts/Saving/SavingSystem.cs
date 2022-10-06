@@ -26,6 +26,7 @@ namespace RPG.Saving
 
         public void Save(string saveFile)
         {
+            Debug.Log("*******Saving System Save " + saveFile);
             Dictionary<string, object> state = LoadFile(saveFile);
             CaptureState(state);
             SaveFile(saveFile, state);
@@ -34,6 +35,18 @@ namespace RPG.Saving
         public void Load(string saveFile)
         {
             RestoreState(LoadFile(saveFile));
+        }
+
+        public void LoadSaveableEntity(string saveFile, SaveableEntity saveableEntity)
+        {
+            Debug.Log("LoadSaveableEntity " + saveFile + "  " + saveableEntity.GetUniqueIdentifier());
+            Dictionary<string, object> state = LoadFile(saveFile);
+            string id = saveableEntity.GetUniqueIdentifier();
+            if (state.ContainsKey(id))
+            {
+                Debug.Log("LoadSaveableEntity key found" + saveFile + "  " + saveableEntity.GetUniqueIdentifier());
+                saveableEntity.RestoreState(state[id]);
+            }
         }
 
         public void Delete(string saveFile)

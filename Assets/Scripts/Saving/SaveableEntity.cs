@@ -28,6 +28,7 @@ namespace RPG.Saving
             return state;
         }
 
+
         public void RestoreState(object state)
         {
             Dictionary<string, object> stateDict = (Dictionary<string, object>)state;

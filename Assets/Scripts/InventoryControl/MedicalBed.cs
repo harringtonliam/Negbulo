@@ -6,6 +6,7 @@ using RPG.Control;
 using RPG.Core;
 using RPG.Movement;
 using RPG.UseablePropControl;
+using RPG.SceneManagement;
 
 
 namespace RPG.InventoryControl
@@ -62,13 +63,17 @@ namespace RPG.InventoryControl
                 GameObject.Destroy(pickup);
                 GameObject newSleeper = Instantiate(sleeperPrefab, spawnPoint.position, Quaternion.identity);
                 inventory.RemoveFromSlot(inventorySlot, 1);
-                newSleeper.transform.parent = this.transform;
+                newSleeper.transform.parent = FindObjectOfType<SceneCharacters>().transform;
                 if (!crewMemberSettings.IsItemCrewMember(sleeper))
                 {
                     SetPanicMode(newSleeper);
                     LockAllTheDoors();
                     SetKanarioToHunt();
                     RedAlertLights();
+                }
+                else
+                {
+                    RememberCrewMember(newSleeper);
                 }
             }
             if (lights != null)
@@ -113,6 +118,12 @@ namespace RPG.InventoryControl
                 activateDeactivateObjects.ActivatetDeactivate(true);
             }
 
+        }
+
+        private void RememberCrewMember(GameObject crewMember)
+        {
+            SceneCharacters sceneCharacters = FindObjectOfType<SceneCharacters>();
+            sceneCharacters.WakeCrewMember(crewMember.transform.position);
         }
 
 

@@ -68,9 +68,14 @@ namespace RPG.Movement
 
         public void MoveTo(Vector3 destination, float speedFraction)
         {
-            navMeshAgent.destination = destination;
-            navMeshAgent.speed = maxSpeed * Mathf.Clamp01(speedFraction);
-            navMeshAgent.isStopped = false;
+            try { 
+                navMeshAgent.destination = destination;
+                navMeshAgent.speed = maxSpeed * Mathf.Clamp01(speedFraction);
+                navMeshAgent.isStopped = false;
+            } catch (Exception ex)
+            {
+                    Debug.LogWarning("Mover MoveTo error: " + ex.Message);
+            }
         }
 
         //AnimationEvents
@@ -93,7 +98,15 @@ namespace RPG.Movement
 
         public void Cancel()
         {
-            navMeshAgent.isStopped = true;
+            try
+            {
+                navMeshAgent.isStopped = true;
+            }
+            catch (Exception ex)
+            {
+                Debug.LogWarning("Mover Cancel error: " + ex.Message);
+            }
+            
         }
 
 
@@ -102,12 +115,21 @@ namespace RPG.Movement
             //can also do this usinga struct
             Dictionary<string, object> data = new Dictionary<string, object>();
             data["position"] = new SerializableVector3(transform.position);
+            if (GetComponent<SaveableEntity>().GetUniqueIdentifier() == "CREWMEMBERUID")
+            {
+                Debug.Log("Mover capture state for crewmemmber  = " + transform.position.ToString());
+            }
             data["rotation"] = new SerializableVector3(transform.eulerAngles);
             return data;
         }
         public void RestoreState(object state)
         {
             Dictionary<string, object> data = (Dictionary<string, object>)state;
+            if (GetComponent<SaveableEntity>().GetUniqueIdentifier() == "CREWMEMBERUID")
+            {
+                Vector3 vector3 = ((SerializableVector3)data["position"]).ToVector();
+                Debug.Log("Mover Restore state for crewmemmber  = " + vector3.ToString());
+            }
             GetComponent<NavMeshAgent>().enabled = false;
             transform.position = ((SerializableVector3)data["position"]).ToVector();
             transform.eulerAngles = ((SerializableVector3)data["rotation"]).ToVector();

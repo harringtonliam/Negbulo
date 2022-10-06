@@ -17,14 +17,17 @@ namespace RPG.SceneManagement
         public event Action onSaveUpated;
 
         GameConsole gameConsole;
+        string currentSaveFile;
 
         private void Start()
         {
             gameConsole = FindObjectOfType<GameConsole>();
+            currentSaveFile = defaultSaveFile;
         }
 
         private IEnumerator LoadLastScene(string savedGame)
         {
+            currentSaveFile = savedGame;
             yield return  GetComponent<SavingSystem>().LoadLastScene(savedGame);
             Fader fader = FindObjectOfType<Fader>();
             fader.FadeOutImmediate();
@@ -34,7 +37,7 @@ namespace RPG.SceneManagement
 
         public void LoadSavedGame(string savedGame)
         {
-
+            currentSaveFile = savedGame;
             StartCoroutine(LoadLastScene(savedGame));
             WriteToConsole("Game loaded from save: " + savedGame);
         }
@@ -42,13 +45,20 @@ namespace RPG.SceneManagement
 
         public void Load()
         {
+            currentSaveFile = defaultSaveFile;
+            GetComponent<SavingSystem>().Load(defaultSaveFile);
 
-            GetComponent<SavingSystem>().Load(defaultSaveFile);  
+        }
+
+        public void LoadSaveableEntity(SaveableEntity saveableEntity)
+        {
+            GetComponent<SavingSystem>().LoadSaveableEntity(currentSaveFile, saveableEntity);
         }
 
         public void Save(string fileName)
         {
             GetComponent<SavingSystem>().Save(fileName);
+            currentSaveFile = fileName;
             WriteToConsole("Game saved: " + fileName);
             if (onSaveUpated!= null)
             {
@@ -60,6 +70,7 @@ namespace RPG.SceneManagement
         public void QuickSave()
         {
             GetComponent<SavingSystem>().Save(quickSaveFile);
+            currentSaveFile = quickSaveFile;
             WriteToConsole("Game quicksaved: " + quickSaveFile);
             if (onSaveUpated != null)
             {
