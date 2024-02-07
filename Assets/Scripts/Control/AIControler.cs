@@ -7,10 +7,11 @@ using RPG.Movement;
 using System;
 using RPG.Attributes;
 using RPG.InventoryControl;
+using RPG.Saving;
 
 namespace RPG.Control
 {
-    public class AIControler : MonoBehaviour
+    public class AIControler : MonoBehaviour, ISaveable
     {
         [SerializeField] AIRelationship aIRelationship = AIRelationship.Hostile;
         [SerializeField] float chaseDistance = 5f;
@@ -215,8 +216,6 @@ namespace RPG.Control
 
         private void PickupInventoryItem()
         {
-
-
             InventoryItem inventoryItem;
 
             if (itemToPickupPickup != null)
@@ -395,6 +394,28 @@ namespace RPG.Control
             }
             return pickups[nearestPickup];
 
+        }
+
+        [System.Serializable]
+        private struct AIControllerSaveData
+        {
+            public string itemIdToPickup;
+        }
+
+        public object CaptureState()
+        {
+            AIControllerSaveData aIControllerSaveData = new AIControllerSaveData();
+            if (itemToPickup != null)
+            {
+                aIControllerSaveData.itemIdToPickup = itemToPickup.ItemID; 
+            }
+            return aIControllerSaveData;
+        }
+
+        public void RestoreState(object state)
+        {
+            AIControllerSaveData aIControllerSaveData = (AIControllerSaveData)state;
+            itemToPickup = InventoryItem.GetFromID(aIControllerSaveData.itemIdToPickup);
         }
     }
 }

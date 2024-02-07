@@ -6,11 +6,12 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using RPG.Control;
 using RPG.Core;
+using RPG.Saving;
 
 namespace RPG.UseablePropControl
 {
 
-    public class UseableProp : MonoBehaviour, IRaycastable
+    public class UseableProp : MonoBehaviour, IRaycastable, ISaveable
     {
         [SerializeField] protected bool isActivated = false;
         [SerializeField] UnityEvent<bool> useProp;
@@ -131,7 +132,28 @@ namespace RPG.UseablePropControl
 
 
 
+        [System.Serializable]
+        public struct UseAblePropSaveData
+        {
+            public bool isActivated;
+            public bool isDisabled;
+        }
 
+        public object CaptureState()
+        {
+            UseAblePropSaveData useAblePropSaveData = new UseAblePropSaveData();
+            useAblePropSaveData.isActivated = this.isActivated;
+            useAblePropSaveData.isDisabled = this.isDisabled;
+            return useAblePropSaveData;
+        }
+
+        public void RestoreState(object state)
+        {
+            UseAblePropSaveData useAblePropSaveData = (UseAblePropSaveData)state;
+            isActivated = useAblePropSaveData.isActivated;
+            isDisabled = useAblePropSaveData.isDisabled;
+
+        }
     }
 }
 

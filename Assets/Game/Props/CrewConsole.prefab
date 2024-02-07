@@ -170,6 +170,7 @@ GameObject:
   - component: {fileID: 3230418249770589873}
   - component: {fileID: 1052444917150111590}
   - component: {fileID: 59957250999742131}
+  - component: {fileID: 268967920872910422}
   m_Layer: 0
   m_Name: CrewConsole
   m_TagString: Untagged
@@ -247,10 +248,23 @@ MonoBehaviour:
   activateSound: {fileID: 231995372493503261}
   deactivateSound: {fileID: 2400704272130753503}
   isDisabled: 0
-  isDisabledText: All the conolse functions are disabled now.
+  isDisabledText: All the console functions are disabled now.
   itemsToGive:
   - inventoryItem: {fileID: 11400000, guid: 9f89caba5b0ff9a4286054a00ff74e87, type: 2}
     number: 1
+--- !u!114 &268967920872910422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7538432149740727468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03271ecafddf2d4d972bd8285f97aaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uniqueIdentifier: CREWCONSOLE
 --- !u!1 &7541694490281620470
 GameObject:
   m_ObjectHideFlags: 0
